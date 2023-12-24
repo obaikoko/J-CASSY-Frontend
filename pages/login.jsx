@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { toast } from 'react-toastify';
 import { useEffect } from 'react';
 import Spinner from '@/components/Spinner';
+import style from '../styles/login.module.css';
 
 function Login() {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -48,8 +49,38 @@ function Login() {
     return <Spinner />;
   }
   return (
-    <div className='container'>
-      <div className='row justify-content-center mt-5'>
+    <div className={style.container}>
+      <div className={style.loginBg}></div>
+      <form className={style.form} onSubmit={onSubmit}>
+        <div className={style.formGroup}>
+          <label htmlFor='email'>Username</label>
+          <input
+            type='email'
+            name='email'
+            id='email'
+            value={email}
+            onChange={onChange}
+          />
+        </div>
+        <div className={style.formGroup}>
+          <label htmlFor='password'>Password</label>
+          <input
+            type='password'
+            name='password'
+            id='password'
+            value={password}
+            onChange={onChange}
+          />
+        </div>
+        <button type='submit' className={style.btn}>
+          Login
+        </button>
+        <Link href='/resetPassword' className={style.btn}>
+          Forgotten password ?
+        </Link>
+      </form>
+
+      {/* <div className='row justify-content-center mt-5'>
         <div className='col-md-6'>
           <div className='card'>
             <div className='card-header'>
@@ -89,7 +120,7 @@ function Login() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -1,13 +1,8 @@
 import React from 'react';
+import style from '../styles/spinner.module.css';
 
 const Spinner = () => {
-  return (
-    <div className='d-flex justify-content-center '>
-      <div className='spinner-border' role='status'>
-        <span className='sr-only'></span>
-      </div>
-    </div>
-  );
+  return <div className={style.spinner}></div>;
 };
 
 export default Spinner;

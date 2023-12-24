@@ -1,0 +1,26 @@
+.footer {
+  position: relative;
+  padding: 55px 0;
+  border-top: 1px solid #aaa;
+}
+.footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.footer ul li {
+  margin-right: 30px;
+  color: #aaa;
+  text-transform: uppercase;
+}
+.footer ul li .footerLink {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.6s;
+}
+.footer ul li .footerLink:hover {
+  color: #aaa;
+}

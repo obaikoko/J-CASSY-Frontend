@@ -5,8 +5,6 @@ import { removeFromCart } from '@/src/features/cart/cartSlice';
 import { decreaseCartQty } from '@/src/features/cart/cartSlice';
 import { addToCart } from '@/src/features/cart/cartSlice';
 
-import { useState } from 'react';
-
 function CartItem({ product }) {
   const dispatch = useDispatch();
 
@@ -22,37 +20,43 @@ function CartItem({ product }) {
   };
 
   return (
-    <div className='row mb-3 border mt-2 p-3 d-flex justify-content-between align-items-center'>
-      <div className='col-2'>
-        <img src={product.image.url} alt={product.name} className='img-fluid' />
-        <button
-          className={style.cartRemoveBtn}
-          onClick={() => removeItemFromCart(product)}
-        >
-          remove
-        </button>
-      </div>
-      <div className='col-2'>{product.title}</div>
-      <div className='col-2'>${product.price}</div>
-      <div className='col-2'>
-        <div className={style.cartQty}>
-          <button
-            className={style.cartQtyBtn}
-            onClick={() => reduceItemQuantity(product)}
-          >
-            -
-          </button>
-          {product.cartQuantity}
-          <button
-            className={style.cartQtyBtn}
-            onClick={() => increaseItemQuantity(product)}
-          >
-            +
-          </button>
+    <section style={{ display: 'flex', width: '100%' }}>
+      <div className={style.cartContainer}>
+        <div className={style.cartItem}>
+          <ul>
+            <li className={style.cartImg}>
+              <img src={product.image.url} alt={product.name} />
+            </li>
+            <li>{product.title}</li>
+            <li>
+              <div className={style.cartQty}>
+                <button
+                  className={style.cartQtyBtn}
+                  onClick={() => reduceItemQuantity(product)}
+                >
+                  -
+                </button>
+                {product.cartQuantity}
+                <button
+                  className={style.cartQtyBtn}
+                  onClick={() => increaseItemQuantity(product)}
+                >
+                  +
+                </button>
+              </div>
+            </li>
+            <li>${product.price}</li>
+            <li>${product.price * product.cartQuantity}</li>
+          </ul>
         </div>
       </div>
-      <div className='col-2'>${product.price * product.cartQuantity}</div>
-    </div>
+      <button
+        className={style.cartRemoveBtn}
+        onClick={() => removeItemFromCart(product)}
+      >
+        Remove
+      </button>
+    </section>
   );
 }
 

@@ -21,16 +21,19 @@ function cart() {
     dispatch(clearCart());
   };
   return (
-    <div className='container mt-4'>
-      <h2 className='text-center'>Shopping Cart</h2>
-
-      <div className='row justify-content-between container '>
-        <div className='col-2 '>Image</div>
-        <div className='col-2'>Product</div>
-        <div className='col-2'>Price</div>
-        <div className='col-2'>Quantity</div>
-        <div className='col-2'>Total</div>
+    <div className={style.cart}>
+      <div className={style.cartBg}></div>
+      <h2>SHOPPING CART</h2>
+      <div className={style.cartHeader}>
+        <ul>
+          <li>image</li>
+          <li>name</li>
+          <li>qty</li>
+          <li>price</li>
+          <li>amount</li>
+        </ul>
       </div>
+
       <div>
         {products && products.length < 1 ? (
           <div className='mt-4 p-4'>
@@ -42,7 +45,25 @@ function cart() {
               products.map((product) => (
                 <CartItem key={product._id} product={product} />
               ))}
-            <div className='d-md-flex justify-content-between'>
+            <div className={style.checkout}>
+              <button className={style.cartCheckoutBtn} onClick={onClick}>
+                Clear Cart
+              </button>
+              <div className='subTotal'>
+                <div className={style.checkoutSubtotal}>
+                  <h3>Total Items</h3>
+                  <h3>{products.length}</h3>
+                </div>
+                <div className={style.checkoutSubtotal}>
+                  <h3>Total Amount:</h3>
+                  <h3>${cartTotalAmount}</h3>
+                </div>
+                <p>Amount for total products in the cart</p>
+                <button className={style.checkoutBtn}>check out</button>
+              </div>
+            </div>
+
+            {/* <div className='d-md-flex justify-content-between'>
               <button className='btn btn-danger h-25 mb-4  ' onClick={onClick}>
                 Clear Cart
               </button>
@@ -58,7 +79,7 @@ function cart() {
                 <p>Amount for total products in the cart</p>
                 <button className='btn btn-success '>check out</button>
               </div>
-            </div>
+            </div> */}
           </>
         )}
       </div>

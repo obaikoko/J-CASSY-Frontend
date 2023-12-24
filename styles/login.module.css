@@ -1,0 +1,65 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.loginBg {
+  background-image: url('https://res.cloudinary.com/dzajrh9z7/image/upload/v1703208014/J-Cassy/pngtree-different-colored-shopping-bags-are-sitting-on-a-dark-background-picture-image_2669759_d4kc2x.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  filter: blur(10px);
+}
+.form {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  border-radius: 10px;
+  width: 600px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  width: 300px;
+}
+.formGroup label {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: bold;
+  font-weight: 300px;
+  color: #fff;
+  cursor: pointer;
+  transform: translateY(-5px);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.formGroup label:hover {
+  transform: translateY(0px);
+}
+.formGroup input {
+  background-color: transparent;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 2px solid#fff;
+  padding: 5px 0;
+  color: #fff;
+}
+.formGroup input:focus {
+  outline: none;
+}
+.btn {
+  text-transform: uppercase;
+  padding: 5px;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}

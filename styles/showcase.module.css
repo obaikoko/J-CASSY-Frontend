@@ -1,0 +1,95 @@
+.sections {
+  position: relative;
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-transform: uppercase;
+}
+.sectionInner {
+  position: absolute;
+  bottom: 200px;
+  left: 150px;
+  max-width: 560px;
+}
+.sectionInner h4 {
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+.sectionInner h2 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-bottom: 20px;
+  animation: fadeInUp 0.5s ease-in-out 0.2s;
+  animation-fill-mode: both;
+}
+
+.btn {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  min-width: 130px;
+  padding: 15px 50px;
+  margin-top: 10px;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  overflow: hidden;
+  z-index: 2;
+  animation: fadeInUp 0.5s ease-in-out 0.4s;
+  animation-fill-mode: both;
+}
+.btn:hover span {
+  color: #000;
+}
+
+.btn .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: #000;
+  z-index: -1;
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn:hover .hover {
+  transform: translateY(0);
+}
+
+.sectionA {
+  background-image: url('https://res.cloudinary.com/dzajrh9z7/image/upload/v1703253113/J-Cassy/4k-nike-4jlwk1qxozddo3t6_sibtp7.jpg');
+}
+.sectionB {
+  background-image: url('https://res.cloudinary.com/dzajrh9z7/image/upload/v1703252536/J-Cassy/composition-of-black-friday-shopping-cart-with-gift-boxes-or-bags-on-dark-background-and-copy-space-concept-by-ai-generated-free-photo_sjqafq.jpg');
+}
+.sectionC {
+  background-image: url('https://res.cloudinary.com/dzajrh9z7/image/upload/v1703253114/J-Cassy/TOINO-ABEL---Clutch-Bag---Natural-Straw-Blue-Dark-Green---N36---Credit-Marta-Rubio-2_s0klur.jpg');
+}
+.sectionD {
+  background-image: url('https://res.cloudinary.com/dzajrh9z7/image/upload/v1703208014/J-Cassy/pngtree-different-colored-shopping-bags-are-sitting-on-a-dark-background-picture-image_2669759_d4kc2x.png');
+}
+.sectionE {
+  background-image: url('https://res.cloudinary.com/dzajrh9z7/image/upload/v1703252752/J-Cassy/colorful-t-shirts-in-front-of-dark-background-ai-generative-free-photo_avtdlx.jpg');
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(140px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

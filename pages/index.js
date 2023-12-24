@@ -32,24 +32,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>J-CASSY</title>
+        <title>J CASSY</title>
       </Head>
       <main>
-        <Showcase/>
-        <h1 className='text-center'>NEW PRODUCTS</h1> 
-     {(admin && admin.role === 'Admin') ? (   <div className=' d-flex justify-content-center m-3 p-3'>
-          <ProductForm />
-        </div>) : (<></>)}
-
-        <div className='row row-cols-1 row-cols-md-3 g-1 align-items-center justify-content-center'>
-          {goods ? (
-            goods.map((good) => <ProductCard key={good._id} good={good} />)
-          ) : (
-            <div>
-              <Spinner />;
-            </div>
-          )}
-        </div>
+        <Showcase/> 
       </main>
     </>
   );

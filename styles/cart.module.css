@@ -1,21 +1,132 @@
-.cartRemoveBtn {
-  background-color: white;
-  text-align: none;
-  border: none;
-  color: red;
-  padding: 2px;
-  margin: 2px;
+.cartBg {
+  position: absolute;
+  background-image: url('https://res.cloudinary.com/dzajrh9z7/image/upload/v1703253112/J-Cassy/download_q4qcuw.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  filter: blur(8px);
 }
-
-.cartQtyBtn {
-  border: none;
-  background-color: transparent;
+.cart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10%;
+}
+.cartHeader ul {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  width: 900px;
+  justify-content: space-around;
+  list-style: none;
+  padding: 10px;
+  margin: 20px 10px;
+  text-transform: uppercase;
+}
+.cartContainer {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin-bottom: 3px;
+  width: 900px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cartItem {
+  /* border-bottom: 1px solid #fff; */
+  width: 80%;
+  height: 100px;
+}
+.cartItem ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  padding: 15px 0;
+}
+.cartItem ul li {
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.5);
+  padding: 0 25px;
+  text-transform: uppercase;
+}
+.cartImg {
+  width: 100px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 40px;
+  /* padding: 5px; */
+}
+.cartItem ul li img {
+  width: 100%;
+  height: 100%;
 }
 .cartQty {
-  border-bottom: 1px solid gray;
-  transform: scale(1.09);
-  padding: 7px;
   display: flex;
+  width: 100%;
+}
+.cartQtyBtn {
+  background-color: transparent;
+  margin: 0 10px;
+  border: none;
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: 400;
+}
+.cartRemoveBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 5px;
+  background-color: transparent;
+  width: 10%;
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+  color: red;
+  cursor: pointer;
+  font-size: large;
+  font-weight: bold;
+}
+.checkout{
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: 60px;
+  margin-bottom: 40px ;
+  padding: 20px 9%;
+  border-bottom: 1px solid #fff;
+}
+.cartCheckoutBtn{
+  background-color: red;
+  color: #fff;
+  border: none;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 5px ;
+  cursor: pointer;
+}
+.checkoutSubtotal{
+  display: flex;
+  
+}
+.checkoutSubtotal h3{
+  margin: 5px 3px;
+}
+.checkoutBtn {
+  background-color: green;
+  color: #fff;
+  border: none;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 5px ;
+  cursor: pointer;
 }
