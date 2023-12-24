@@ -34,13 +34,15 @@ function gallery() {
           <div className={style.galleryTitle}>
             <h1>J CASSY COLLECTIONS</h1>
           </div>
-          {goods ? (
-            goods.map((good) => <ProductCard key={good._id} good={good} />)
-          ) : (
-            <div>
-              <h4>Something went wrong</h4>
-            </div>
-          )}
+          <section className={style.galleryItems}>
+            {goods ? (
+              goods.map((good) => <ProductCard key={good._id} good={good} />)
+            ) : (
+              <div>
+                <h4>Something went wrong</h4>
+              </div>
+            )}
+          </section>
         </div>
 
         {/* <section className={style.galleryItems}>

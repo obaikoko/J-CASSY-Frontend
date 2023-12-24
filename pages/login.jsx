@@ -52,6 +52,7 @@ function Login() {
     <div className={style.container}>
       <div className={style.loginBg}></div>
       <form className={style.form} onSubmit={onSubmit}>
+        <h1>SIGN IN</h1>
         <div className={style.formGroup}>
           <label htmlFor='email'>Username</label>
           <input
@@ -79,48 +80,6 @@ function Login() {
           Forgotten password ?
         </Link>
       </form>
-
-      {/* <div className='row justify-content-center mt-5'>
-        <div className='col-md-6'>
-          <div className='card'>
-            <div className='card-header'>
-              <h4>Login</h4>
-            </div>
-            <div className='card-body'>
-              <form onSubmit={onSubmit}>
-                <div className='form-group'>
-                  <label htmlFor='email'>Username</label>
-                  <input
-                    type='email'
-                    name='email'
-                    className='form-control'
-                    id='email'
-                    value={email}
-                    onChange={onChange}
-                  />
-                </div>
-                <div className='form-group'>
-                  <label htmlFor='password'>Password</label>
-                  <input
-                    type='password'
-                    name='password'
-                    className='form-control'
-                    id='password'
-                    value={password}
-                    onChange={onChange}
-                  />
-                </div>
-                <button type='submit' className='btn btn-primary my-3'>
-                  Login
-                </button>
-              </form>
-              <Link href='/resetPassword' className='text-decoration-none'>
-                Forgotten password ?
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }

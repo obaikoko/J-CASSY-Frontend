@@ -11,7 +11,7 @@ function ProductCard({ good }) {
   };
   return (
       
-      <section className={style.galleryItems}>
+     
         <div className={style.galleryItem}>
           <div className={style.galleryImg}>
             <img src={good.image.url} alt={good.title} />
@@ -41,7 +41,6 @@ function ProductCard({ good }) {
             </li>
           </ul>
         </div>
-      </section>
       /* <div className='m-4 border rounded  shadow p-4'>
         <div className='text-center'>
           <img
