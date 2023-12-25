@@ -93,3 +93,17 @@
     transform: translateY(0);
   }
 }
+
+
+@media(max-width: 960px) {
+
+}
+@media(max-width: 600px) {
+.sectionInner{
+  bottom: 75px;
+  left: 20px;
+}
+.sectionInner h2 {
+  font-size: 40px;
+}
+}
