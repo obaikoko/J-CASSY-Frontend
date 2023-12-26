@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import style from '../styles/cart.module.css';
+import Link from 'next/link';
 
 import { removeFromCart } from '@/src/features/cart/cartSlice';
 import { decreaseCartQty } from '@/src/features/cart/cartSlice';
@@ -25,7 +26,9 @@ function CartItem({ product }) {
         <div className={style.cartItem}>
           <ul>
             <li className={style.cartImg}>
-              <img src={product.image.url} alt={product.name} />
+              <Link href={`products/${product._id}`}>
+                <img src={product.image.url} alt={product.name} />
+              </Link>
             </li>
             <li>{product.title}</li>
             <li>

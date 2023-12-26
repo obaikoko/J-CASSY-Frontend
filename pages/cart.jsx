@@ -34,7 +34,7 @@ function cart() {
         </ul>
       </div>
 
-      <div style={{ width: '100%'}}>
+      <div style={{ width: '100%' }}>
         {products && products.length < 1 ? (
           <div className='mt-4 p-4'>
             <h1 className='text-center'>no Product in the cart</h1>

@@ -12,7 +12,9 @@ function ProductCard({ good }) {
   return (
     <div className={style.galleryItem}>
       <div className={style.galleryImg}>
-        <img src={good.image.url} alt={good.title} />
+        <Link href={`products/${good._id}`}>
+          <img src={good.image.url} alt={good.title} />
+        </Link>
       </div>
       <ul>
         <li>
@@ -29,9 +31,6 @@ function ProductCard({ good }) {
             <button className='btn btn-primary' onClick={() => onClick(good)}>
               Add to Cart
             </button>
-            <Link href={`products/${good._id}`}>
-              <button>view</button>
-            </Link>
           </div>
         </li>
       </ul>

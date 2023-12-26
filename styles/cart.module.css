@@ -150,7 +150,7 @@
   .cartItems {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 0px 5px;
   }
   .cartHeader ul {
     width: 100%;
