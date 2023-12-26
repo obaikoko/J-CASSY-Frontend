@@ -71,6 +71,7 @@
     }
     .productTxt{
         width: 100%;
+        margin-top: 50px;
     }
     .productTxt h2{
         color: #fff;

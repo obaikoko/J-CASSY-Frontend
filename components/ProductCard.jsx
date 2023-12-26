@@ -24,9 +24,6 @@ function ProductCard({ good }) {
           <h4>Price: ${good.price}</h4>
         </li>
         <li>
-          <p>{good.description}</p>
-        </li>
-        <li>
           <div className={style.galleryBtn}>
             <button className='btn btn-primary' onClick={() => onClick(good)}>
               Add to Cart
