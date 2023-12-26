@@ -26,29 +26,15 @@ const Navbar = () => {
   return (
     <>
       <div id='overlayShow' className={open ? `${style.overlay}` : ''}></div>
-      <div id='mobileMenu' className={ open ? `${style.mobileMainMenu} ${style.showMenu}` : `${style.mobileMainMenu}`}>
+      <div
+        id='mobileMenu'
+        className={
+          open
+            ? `${style.mobileMainMenu} ${style.showMenu}`
+            : `${style.mobileMainMenu}`
+        }
+      >
         <ul>
-          <li>
-            <Link href='/' className={style.navLink}>
-              services
-            </Link>
-          </li>
-          <li>
-            <Link href='/' className={style.navLink}>
-              services
-            </Link>
-          </li>
-          <li>
-            <Link href='/' className={style.navLink}>
-              services
-            </Link>
-          </li>
-          <li>
-            <Link href='/' className={style.navLink}>
-              services
-            </Link>
-          </li>
-
           <li className={style.mobileOnly}>
             <Link href='/' className={style.navLink}>
               home
@@ -79,6 +65,26 @@ const Navbar = () => {
                 LOGIN
               </Link>
             )}
+          </li>
+          <li>
+            <Link href='/' className={style.navLink}>
+              new arrivals
+            </Link>
+          </li>
+          <li>
+            <Link href='/' className={style.navLink}>
+              promo
+            </Link>
+          </li>
+          <li>
+            <Link href='/' className={style.navLink}>
+              services
+            </Link>
+          </li>
+          <li>
+            <Link href='/' className={style.navLink}>
+              out of stock
+            </Link>
           </li>
         </ul>
       </div>

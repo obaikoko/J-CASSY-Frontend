@@ -20,7 +20,7 @@ function CartItem({ product }) {
   };
 
   return (
-    <section style={{ display: 'flex', width: '100%' }}>
+    <section className={style.cartItems}>
       <div className={style.cartContainer}>
         <div className={style.cartItem}>
           <ul>

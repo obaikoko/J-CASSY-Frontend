@@ -34,7 +34,7 @@ function cart() {
         </ul>
       </div>
 
-      <div>
+      <div style={{ width: '100%'}}>
         {products && products.length < 1 ? (
           <div className='mt-4 p-4'>
             <h1 className='text-center'>no Product in the cart</h1>
@@ -62,24 +62,6 @@ function cart() {
                 <button className={style.checkoutBtn}>check out</button>
               </div>
             </div>
-
-            {/* <div className='d-md-flex justify-content-between'>
-              <button className='btn btn-danger h-25 mb-4  ' onClick={onClick}>
-                Clear Cart
-              </button>
-              <div className='subTotal'>
-                <div className='total d-flex justify-content-between'>
-                  <h5>Total Items</h5>
-                  <p>{products.length}</p>
-                </div>
-                <div className='total d-flex justify-content-between'>
-                  <h3>Subtotal</h3>
-                  <h3>${cartTotalAmount}</h3>
-                </div>
-                <p>Amount for total products in the cart</p>
-                <button className='btn btn-success '>check out</button>
-              </div>
-            </div> */}
           </>
         )}
       </div>

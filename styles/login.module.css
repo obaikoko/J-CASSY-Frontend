@@ -63,3 +63,15 @@
   color: #fff;
   cursor: pointer;
 }
+
+@media(max-width: 960px){
+
+}
+@media(max-width: 600px){
+.form{
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+}
+}
