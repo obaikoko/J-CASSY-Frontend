@@ -29,13 +29,14 @@
 }
 .productImg{
     background-color: #fff;
-    border-radius: 20px;
+    border-radius: 40px;
     width: 400px;
     height: 300px;
 }
 .productImg img{
     width: 100%;
     height: 100%;
+    padding: 20px;
 }
 .productTxt{
     display: flex;
