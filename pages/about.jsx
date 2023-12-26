@@ -6,7 +6,7 @@ function about() {
     <section className={style.about}>
       <div className={style.aboutBg}></div>
       <div className={style.aboutTxt}>
-        <h1> J CASSY COLLECTION</h1>
+        <h2> J CASSY COLLECTION</h2>
         <p>
            Welcome to J CASSY where style meets versatility! Dive into a world
           of fashion that transcends trends and embraces individuality. Explore

@@ -26,6 +26,10 @@ function gallery() {
       setGoods(products);
     }
   }, [isSuccess]);
+
+  if (isLoading) {
+    return <Spinner />;
+  }
   return (
     <>
       <div className={style.container}>
