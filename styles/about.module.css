@@ -58,10 +58,14 @@
   .aboutTxt {
     width: 100%;
     margin-top: 100px;
-    padding: 0px 12px;
+    padding: 0px 20px;
+    margin-bottom: 40px;
+  }
+  .aboutTxt h2{
+    margin-top: 100px;
   }
   .aboutTxt p{
     text-align: center;
-    margin-top: 50px;
+    margin: 50px 0;
   }
 }
