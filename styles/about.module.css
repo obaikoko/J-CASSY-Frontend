@@ -3,12 +3,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px;
   width: 100%;
-  height: 100%;
-  /* overflow: hidden; */
+  height: 100vh;
 }
 .aboutBg {
+  position: absolute;
+  top: 0;
+  left: 0;
   background-image: url('https://res.cloudinary.com/dzajrh9z7/image/upload/v1703252536/J-Cassy/composition-of-black-friday-shopping-cart-with-gift-boxes-or-bags-on-dark-background-and-copy-space-concept-by-ai-generated-free-photo_sjqafq.jpg');
   background-position: center center;
   background-repeat: no-repeat;
@@ -19,13 +20,10 @@
   animation: fadeIn 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .aboutTxt {
-  position: absolute;
-  top: 25%;
-  left: 23%;
   border-radius: 10px;
   width: 50%;
-  height: 50%;
-  transform: translate(-50% -50%);
+  height: 70%;
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,8 +56,7 @@
 }
 @media (max-width: 600px) {
   .aboutTxt {
-    width: 80%;
-    transform: translateX(-20%);
-    margin-top: 30px;
+    width: 100%;
+    padding: 0px 2px;
   }
 }
