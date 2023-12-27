@@ -11,6 +11,8 @@
     top: 0;
     left: 0;
     background-image: url('https://res.cloudinary.com/dzajrh9z7/image/upload/v1703253113/J-Cassy/4k-nike-4jlwk1qxozddo3t6_sibtp7.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
     height: 100%;
     width: 100%;
     z-index: -1;
