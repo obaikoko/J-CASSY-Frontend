@@ -1,8 +1,24 @@
-import React from 'react';
 import style from '../styles/showcase.module.css';
 import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
 
-function Showcase() {
+function Showcase({testimonials}) {
+    const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+     useEffect(() => {
+       const interval = setInterval(() => {
+         setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+       }, 10000); // Update every 10 seconds
+
+       return () => clearInterval(interval);
+     }, [testimonials.length]);
+
+  let idx = 1;
+  const updateTestimonial = () => {
+   const {name, role, photo, text} = testimonials[idx]
+  };
+  // updateTestimonial()
+
   return (
     <>
       <section className={`${style.sections} ${style.sectionA}`}>
@@ -99,25 +115,23 @@ function Showcase() {
         <div className={style.testimonialContainer}>
           <div className={style.progressBar}></div>
           <div className={style.quote}></div>
-          <p className={style.testimonial}>
-            "J CASSY is an absolute gem in the fashion world! Their website
-            offers a stunning array of trendy and elegant pieces that perfectly
-            suit any style. The quality of their clothing is exceptional, and
-            I'm always impressed by the attention to detail in every design. Not
-            to mention, their customer service is top-notch—efficient, friendly,
-            and truly dedicated to ensuring a fantastic shopping experience. I
-            can't recommend J CASSY enough for anyone looking to elevate their
-            wardrobe with chic and high-quality fashion pieces!"
+           <p id='testimonial' className={style.testimonial}>
+            {testimonials[currentTestimonial].text}
           </p>
           <div className={style.user}>
             <img
-            className={style.userImage}
-              src='https://randomuser.me/api/portraits/women/46.jpg'
+              id='photo'
+              className={style.userImage}
+              src={testimonials[currentTestimonial].photo}
               alt=''
             />
             <div className={style.userDetails}>
-              <h4 className={style.name}>jlkdlsdk</h4>
-              <p className={style.role}>mlamlaskl</p>
+              <h4 id='name' className={style.name}>
+                {testimonials[currentTestimonial].name}
+              </h4>
+              <p id='role' className={style.role}>
+                {testimonials[currentTestimonial].role}
+              </p>
             </div>
           </div>
         </div>
