@@ -54,16 +54,11 @@ function Showcase() {
      useEffect(() => {
        const interval = setInterval(() => {
          setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-       }, 10000); // Update every 10 seconds
+       }, 10000); 
 
        return () => clearInterval(interval);
      }, [testimonials.length]);
 
-  let idx = 1;
-  const updateTestimonial = () => {
-   const {name, role, photo, text} = testimonials[idx]
-  };
-  // updateTestimonial()
 
   return (
     <>

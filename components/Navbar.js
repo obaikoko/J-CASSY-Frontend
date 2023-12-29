@@ -46,26 +46,16 @@ const Navbar = () => {
             </Link>
           </li>
           <li className={style.mobileOnly}>
-            <Link href='/cart' className={style.navLink}>
-              cart
-            </Link>
-          </li>
-          <li className={style.mobileOnly}>
             <Link href='/gallery' className={style.navLink}>
               Gallery
             </Link>
           </li>
           <li className={style.mobileOnly}>
-            {isLoggedIn ? (
-              <Link href='/login' className={style.navLink} onClick={onClick}>
-                LOGOUT
-              </Link>
-            ) : (
-              <Link href='/login' className={style.navLink}>
-                LOGIN
-              </Link>
-            )}
+            <Link href='/cart' className={style.navLink}>
+              cart
+            </Link>
           </li>
+
           <li>
             <Link href='/' className={style.navLink}>
               new arrivals
@@ -85,6 +75,17 @@ const Navbar = () => {
             <Link href='/' className={style.navLink}>
               out of stock
             </Link>
+          </li>
+          <li className={style.mobileOnly}>
+            {isLoggedIn ? (
+              <Link href='/login' className={style.navLink} onClick={onClick}>
+                LOGOUT
+              </Link>
+            ) : (
+              <Link href='/login' className={style.navLink}>
+                LOGIN
+              </Link>
+            )}
           </li>
         </ul>
       </div>
@@ -109,14 +110,15 @@ const Navbar = () => {
                 about
               </Link>
             </li>
-            <li>
-              <Link href='/cart' className={style.navLink}>
-                cart
-              </Link>
-            </li>
+
             <li>
               <Link href='/gallery' className={style.navLink}>
                 Gallery
+              </Link>
+            </li>
+            <li>
+              <Link href='/cart' className={style.navLink}>
+                cart
               </Link>
             </li>
             <li>
