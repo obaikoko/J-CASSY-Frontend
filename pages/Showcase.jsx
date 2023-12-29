@@ -94,6 +94,34 @@ function Showcase() {
           </Link>
         </div>
       </section>
+      <section className={style.testimonialSection}>
+        <h1>Testimonials</h1>
+        <div className={style.testimonialContainer}>
+          <div className={style.progressBar}></div>
+          <div className={style.quote}></div>
+          <p className={style.testimonial}>
+            "J CASSY is an absolute gem in the fashion world! Their website
+            offers a stunning array of trendy and elegant pieces that perfectly
+            suit any style. The quality of their clothing is exceptional, and
+            I'm always impressed by the attention to detail in every design. Not
+            to mention, their customer service is top-notch—efficient, friendly,
+            and truly dedicated to ensuring a fantastic shopping experience. I
+            can't recommend J CASSY enough for anyone looking to elevate their
+            wardrobe with chic and high-quality fashion pieces!"
+          </p>
+          <div className={style.user}>
+            <img
+            className={style.userImage}
+              src='https://randomuser.me/api/portraits/women/46.jpg'
+              alt=''
+            />
+            <div className={style.userDetails}>
+              <h4 className={style.name}>jlkdlsdk</h4>
+              <p className={style.role}>mlamlaskl</p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className={`${style.sections} ${style.sectionD}`}>
         <div className={style.sectionInner}>
           <h4>carton materials</h4>
