@@ -122,11 +122,10 @@
 }
 .orders {
   background-color: #fff;
-  /* margin: 20px 10px; */
   margin: 20px 10px;
   
   width: 97%;
-  /* height: 500px; */
+
   padding: 0 10px;
 }
 .orders h2{
@@ -143,7 +142,6 @@
   border-bottom: 1px solid #aaa;
 }
 .userId ul {
-  /* background-color: blue; */
   list-style: none;
   display: flex;
   height: 100%;
@@ -151,14 +149,16 @@
 .userId ul li {
     margin: 0 20px;
 }
+
 .userDetails ul {
-  /* background-color: orange; */
   list-style: none;
   display: flex;
-  height: 100%;
+  width: 100%;
+  
 }
 .userDetails ul li{
       margin: 0 20px;
+      width: 100%;
 }
 @media(max-width: 960px) {
       .main {
@@ -172,6 +172,10 @@
     width: 100%;
     margin: 5px 20px;
   }
+  .userDetails ul{
+    width: 100%;
+  }
+
 }
 @media (max-width: 600px) {
   .aside {
