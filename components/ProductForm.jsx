@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addProduct } from '@/src/features/products/productSlice';
 import { toast } from 'react-toastify';
+import style from '../styles/gallery.module.css'
 const productForm = () => {
   const [fileInput, setFileInput] = useState('');
   const [previewSource, setPreviewSource] = useState('');
@@ -59,7 +60,8 @@ const productForm = () => {
   };
   return (
     <>
-      <button
+    <button className={style.addBtn}>Add Product</button>
+      {/* <button
         type='button'
         className='btn btn-primary'
         data-bs-toggle='modal'
@@ -177,7 +179,7 @@ const productForm = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

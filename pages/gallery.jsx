@@ -49,6 +49,7 @@ function gallery() {
           </section>
         </div>
       </div>
+      <ProductForm/>
     </>
   );
 }

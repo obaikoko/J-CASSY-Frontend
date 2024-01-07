@@ -65,7 +65,12 @@
 }
 
 @media(max-width: 960px){
-
+.form{
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+}
 }
 @media(max-width: 600px){
 .form{

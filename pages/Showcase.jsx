@@ -1,3 +1,4 @@
+import Video from '@/components/Video';
 import style from '../styles/showcase.module.css';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
@@ -141,6 +142,8 @@ function Showcase() {
           </Link>
         </div>
       </section>
+
+
       <section className={`${style.sections} ${style.sectionE}`}>
         <div className={style.sectionInner}>
           <h4>Men clothings</h4>
@@ -156,7 +159,7 @@ function Showcase() {
         <div className={style.testimonialContainer}>
           <div className={style.progressBar}></div>
           <div className={style.quote}></div>
-           <p id='testimonial' className={style.testimonial}>
+          <p id='testimonial' className={style.testimonial}>
             {testimonials[currentTestimonial].text}
           </p>
           <div className={style.user}>
