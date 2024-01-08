@@ -14,11 +14,8 @@ function Layout({ children }) {
 
   return (
     <div>
-      {isLoggedIn ? (
+      {isLoggedIn && (isLoggedIn.role == 'Admin') ? (
         <>
-          <header>
-            
-          </header>
           <Dashboard />
         </>
       ) : (

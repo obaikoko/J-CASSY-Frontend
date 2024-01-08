@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState, useEffect} from 'react';
 import style from '../styles/dashboard.module.css';
 import Link from 'next/link';
 import {
@@ -6,10 +6,7 @@ import {
   FaShoppingCart,
   FaUsers,
   FaChartBar,
-  FaGlobe,
   FaStar,
-  FaTags,
-  FaPencilAlt,
   FaMoneyBill,
   FaFileInvoiceDollar,
   FaCartArrowDown,
@@ -17,22 +14,29 @@ import {
   FaSignOutAlt,
   FaSun,
   FaBell,
-  FaUserAlt,
-  FaUserLock,
-  FaLaptop,
   FaShoppingBasket,
   FaTv,
   FaLaptopCode,
-  FaSearch,
-  FaDotCircle,
+  FaBars,
 } from 'react-icons/fa';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { logout, reset } from '@/src/features/auth/authSlice';
 import BarChart from './BarChart';
 
 function Dashboard() {
   const dispatch = useDispatch();
+  const [open, setIsOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState('');
+  const { user } = useSelector((state) => state.auth);
 
+    useEffect(() => {
+      setIsLoggedIn(user);
+    }, [isLoggedIn, user]);
+
+  const menuBtnClicked = () => {
+    setIsOpen(!open);
+    document.body.classList.toggle('stopScrolling');
+  };
   const onClick = () => {
     dispatch(logout());
     dispatch(reset());
@@ -93,27 +97,9 @@ function Dashboard() {
             </li>
             <li>
               <div className={style.icon}>
-                <FaGlobe />
-              </div>
-              Sellers
-            </li>
-            <li>
-              <div className={style.icon}>
-                <FaTags />
-              </div>
-              Hot Offers
-            </li>
-            <li>
-              <div className={style.icon}>
                 <FaCogs />
               </div>
               Settings
-            </li>
-            <li>
-              <div className={style.icon}>
-                <FaPencilAlt />
-              </div>
-              Appearance
             </li>
             <li>
               <Link className={style.logout} href='/' onClick={onClick}>
@@ -126,7 +112,12 @@ function Dashboard() {
           </ul>
         </aside>
         <main className={style.main}>
-          {/* <header className={style.header}>
+          <header className={style.header}>
+            {/* Hambuger Menu */}
+            <div className={style.hambuger}>
+                <FaBars/>
+            </div>
+            
             <form className={style.form}>
               <input type='text' placeholder='Search' />
             </form>
@@ -156,7 +147,7 @@ function Dashboard() {
                 </button>
               </li>
             </ul>
-          </header> */}
+          </header>
           <div className={style.dashboardBody}>
             <h2>Dashboard</h2>
             <ul>
@@ -199,9 +190,7 @@ function Dashboard() {
             </div>
           </div>
           <div className={style.orders}>
-            <h2>
-                Latest Orders
-            </h2>
+            <h2>Latest Orders</h2>
             <div className={style.orderInfo}>
               <div className={style.userId}>
                 <ul>

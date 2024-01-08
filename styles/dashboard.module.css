@@ -1,18 +1,22 @@
 .container {
+  position: relative;
   display: flex;
   background-color: #ede9e9;
   width: 100vw;
 }
 
 .aside {
-  position: absolute;
+  position: fixed;
+  /* overflow-y: auto; */
   top: 0;
   left: 0;
-  width: 30%;
+  width: 31%;
+  height: 100%;
   background-color: #fff;
   color: #000;
   display: flex;
   flex-direction: column;
+  z-index: 3;
 }
 
 .aside ul {
@@ -57,6 +61,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  list-style: none;
+}
+.header ul li {
+  margin: 0 10px;
+}
+.hambuger{
+    margin: 20px;
+    display: none;
+    z-index: 4;
 }
 .form {
   padding: 10px;
@@ -84,19 +97,21 @@
 .imgContainer {
   width: 40px;
   height: 40px;
-  background-color: red;
 }
 .imgContainer img {
   width: 100%;
   border-radius: 50%;
 }
-.main .dashboardBody ul {
+.dashboardBody h2 {
+  padding: 20px;
+}
+.dashboardBody ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
   list-style: none;
 }
-.main .dashboardBody ul li {
+.dashboardBody ul li {
   background-color: #fff;
   display: flex;
   border-radius: 5px;
@@ -123,13 +138,13 @@
 .orders {
   background-color: #fff;
   margin: 20px 10px;
-  
+
   width: 97%;
 
   padding: 0 10px;
 }
-.orders h2{
-    padding: 20px;
+.orders h2 {
+  padding: 20px;
 }
 .orderInfo {
   display: flex;
@@ -147,54 +162,72 @@
   height: 100%;
 }
 .userId ul li {
-    margin: 0 20px;
+  margin: 0 20px;
 }
 
 .userDetails ul {
   list-style: none;
   display: flex;
   width: 100%;
-  
 }
-.userDetails ul li{
-      margin: 0 20px;
-      width: 100%;
+.userDetails ul li {
+  margin: 0 20px;
+  width: 100%;
 }
-@media(max-width: 960px) {
-      .main {
-    width: 100%;
+@media (max-width: 960px) {
+
+ 
+
+
+  .dashboardBody ul {
+    display: flex;
+    flex-wrap: wrap;
   }
-    .main .dashboardBody ul{
-        display: flex;
-        flex-wrap: wrap;
-    }
-     .main .dashboardBody ul li {
+  .dashboardBody ul li {
     width: 100%;
     margin: 5px 20px;
   }
-  .userDetails ul{
+  .userDetails ul {
     width: 100%;
   }
-
+  .userDetails ul li {
+    margin: 0 10px;
+  }
 }
 @media (max-width: 600px) {
-  .aside {
-    display: none;
-  }
-  .main {
+.main{
     width: 100%;
-  }
-  .main .dashboardBody ul {
-    /* width: 100%; */
-  }
+}
   .main .dashboardBody ul li {
     width: 100%;
     margin: 5px 20px;
   }
-  .chart {
+  .aside{
+    display: none;
+    width: 100%;
+  }
+  .hambuger{
+    /* position: fixed; */
+    display: block;
+    /* margin-left: 300px; */
     /* display: none; */
   }
-  .orders{
-    padding: 0;
+  
+  .orderInfo{
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
   }
+  .userId ul{
+    display: flex;
+    flex-direction: column;
+    
+  }
+.userDetails ul{
+    display: flex;
+    flex-direction: column;
+     margin: 0 10px;
+}
 }
