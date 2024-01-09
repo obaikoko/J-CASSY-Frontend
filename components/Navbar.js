@@ -94,7 +94,11 @@ const Navbar = () => {
                 LOGOUT
               </Link>
             ) : (
-              <Link href='/login' className={style.navLink}>
+              <Link
+                href='/login'
+                onClick={menuBtnClicked}
+                className={style.navLink}
+              >
                 LOGIN
               </Link>
             )}

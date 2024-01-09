@@ -28,7 +28,11 @@ function gallery() {
   }, [isSuccess]);
 
   if (isLoading) {
-    return <Spinner />;
+    return (
+      <div className={style.loading}>
+        <Spinner />;
+      </div>
+    );
   }
   return (
     <>
@@ -42,14 +46,14 @@ function gallery() {
             {goods ? (
               goods.map((good) => <ProductCard key={good._id} good={good} />)
             ) : (
-              <div>
+              <div className={style.error}>
                 <h4>Something went wrong</h4>
               </div>
             )}
           </section>
         </div>
       </div>
-      <ProductForm/>
+      <ProductForm />
     </>
   );
 }

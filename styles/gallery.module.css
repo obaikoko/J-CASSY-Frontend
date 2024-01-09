@@ -1,3 +1,14 @@
+  .loading {
+    width: 100vw;
+    height: 100vh;
+  }
+  .error {
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 .container {
   position: relative;
   width: 100vw;
@@ -89,7 +100,7 @@
   .galleryTitle {
     margin-top: 120px;
   }
-   .galleryItems {
+  .galleryItems {
     width: 100%;
   }
 }
@@ -119,4 +130,5 @@
   .galleryItem ul li h1 {
     font-size: 30px;
   }
+
 }

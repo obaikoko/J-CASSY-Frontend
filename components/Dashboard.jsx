@@ -35,7 +35,7 @@ function Dashboard() {
 
   const menuBtnClicked = () => {
     setIsOpen(!open);
-      document.body.classList.toggle('stopScrolling');
+    document.body.classList.toggle('stopScrolling');
   };
   const onClick = () => {
     dispatch(logout());
@@ -55,52 +55,68 @@ function Dashboard() {
         >
           <ul>
             <li className={style.active}>
-              <div className={style.icon}>
-                <FaTv />
-              </div>
-              Dashboard
+              <button>
+                <div className={style.icon}>
+                  <FaTv />
+                </div>
+                Dashboard
+              </button>
             </li>
             <li>
-              <div className={style.icon}>
-                <FaShoppingBasket />
-              </div>
-              Products
+              <button>
+                <div className={style.icon}>
+                  <FaShoppingBasket />
+                </div>
+                Products
+              </button>
             </li>
             <li>
-              <div className={style.icon}>
-                <FaShoppingCart />
-              </div>
-              Orders
+              <button>
+                <div className={style.icon}>
+                  <FaShoppingCart />
+                </div>
+                Orders
+              </button>
             </li>
             <li>
-              <div className={style.icon}>
-                <FaUsers />
-              </div>
-              Customers
+              <button>
+                <div className={style.icon}>
+                  <FaUsers />
+                </div>
+                Customers
+              </button>
             </li>
             <li>
-              <div className={style.icon}>
-                <FaChartBar />
-              </div>
-              Statistics
+              <button>
+                <div className={style.icon}>
+                  <FaChartBar />
+                </div>
+                Statistics
+              </button>
             </li>
             <li>
-              <div className={style.icon}>
-                <FaStar />
-              </div>
-              Reviews
+              <button>
+                <div className={style.icon}>
+                  <FaStar />
+                </div>
+                Reviews
+              </button>
             </li>
             <li>
-              <div className={style.icon}>
-                <FaMoneyBill />
-              </div>
-              Transactions
+              <button>
+                <div className={style.icon}>
+                  <FaMoneyBill />
+                </div>
+                Transactions
+              </button>
             </li>
             <li>
-              <div className={style.icon}>
-                <FaCogs />
-              </div>
-              Settings
+              <button>
+                <div className={style.icon}>
+                  <FaCogs />
+                </div>
+                Settings
+              </button>
             </li>
             <li>
               <Link className={style.logout} href='/' onClick={onClick}>
