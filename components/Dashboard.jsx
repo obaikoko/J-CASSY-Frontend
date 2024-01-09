@@ -119,12 +119,12 @@ function Dashboard() {
               </button>
             </li>
             <li>
-              <Link className={style.logout} href='/' onClick={onClick}>
+              <button className={style.logout}  onClick={onClick}>
                 <div className={style.icon}>
                   <FaSignOutAlt />
                 </div>
                 Logout
-              </Link>
+              </button>
             </li>
           </ul>
         </aside>
