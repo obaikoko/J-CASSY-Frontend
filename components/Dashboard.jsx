@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import style from '../styles/dashboard.module.css';
 import Link from 'next/link';
 import {
@@ -29,13 +29,12 @@ function Dashboard() {
   const [isLoggedIn, setIsLoggedIn] = useState('');
   const { user } = useSelector((state) => state.auth);
 
-    useEffect(() => {
-      setIsLoggedIn(user);
-    }, [isLoggedIn, user]);
+  useEffect(() => {
+    setIsLoggedIn(user);
+  }, [isLoggedIn, user]);
 
   const menuBtnClicked = () => {
     setIsOpen(!open);
-    document.body.classList.toggle('stopScrolling');
   };
   const onClick = () => {
     dispatch(logout());
@@ -45,14 +44,14 @@ function Dashboard() {
   return (
     <>
       <div className={style.container}>
-        <aside className={style.aside}>
+        <aside
+          className={
+            open
+              ? `${style.mobileMainMenu} ${style.hideMenu}`
+              : `${style.mobileMainMenu}`
+          }
+        >
           <ul>
-            <li>
-              <div className={style.icon}>
-                <FaLaptopCode />
-              </div>
-              Administrator
-            </li>
             <li className={style.active}>
               <div className={style.icon}>
                 <FaTv />
@@ -111,43 +110,60 @@ function Dashboard() {
             </li>
           </ul>
         </aside>
-        <main className={style.main}>
-          <header className={style.header}>
-            {/* Hambuger Menu */}
-            <div className={style.hambuger}>
-                <FaBars/>
-            </div>
-            
-            <form className={style.form}>
-              <input type='text' placeholder='Search' />
-            </form>
-            <ul>
-              <li>
-                <button>
-                  <h2>
-                    <FaSun />
-                  </h2>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <h2>
-                    <FaBell />
-                  </h2>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <div className={style.imgContainer}>
-                    <img
-                      src='https://randomuser.me/api/portraits/women/7.jpg'
-                      alt='name'
-                    />
-                  </div>
-                </button>
-              </li>
-            </ul>
-          </header>
+        <header className={style.header}>
+          <div className={style.adminIcon}>
+            <h1>
+              <FaLaptopCode />
+            </h1>
+            <h2>ADMINISTRATOR</h2>
+          </div>
+          {/* Hambuger Menu */}
+          <button
+            id='menuBtn'
+            className={`${style.hambuger} ${open ? `${style.open}` : ''} `}
+            onClick={menuBtnClicked}
+            type='button'
+          >
+            <span className={style.hambugerTop}></span>
+            <span className={style.hambugerMiddle}></span>
+            <span className={style.hambugerButtom}></span>
+          </button>
+
+          <form className={style.form}>
+            <input type='text' placeholder='Search' />
+          </form>
+          <ul>
+            <li>
+              <button>
+                <h2>
+                  <FaSun />
+                </h2>
+              </button>
+            </li>
+            <li>
+              <button>
+                <h2>
+                  <FaBell />
+                </h2>
+              </button>
+            </li>
+            <li>
+              <button>
+                <div className={style.imgContainer}>
+                  <img
+                    src='https://randomuser.me/api/portraits/women/7.jpg'
+                    alt='name'
+                  />
+                </div>
+              </button>
+            </li>
+          </ul>
+        </header>
+        <main
+          className={
+            open ? `${style.main} ${style.expandMain}` : `${style.main}`
+          }
+        >
           <div className={style.dashboardBody}>
             <h2>Dashboard</h2>
             <ul>

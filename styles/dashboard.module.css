@@ -5,26 +5,29 @@
   width: 100vw;
 }
 
-.aside {
+.mobileMainMenu {
   position: fixed;
-  /* overflow-y: auto; */
-  top: 0;
+  top: 80px;
   left: 0;
   width: 31%;
   height: 100%;
+  z-index: 3;
   background-color: #fff;
   color: #000;
   display: flex;
-  flex-direction: column;
-  z-index: 3;
+  transform: translateX(0%);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.hideMenu {
+  transform: translateX(0%);
 }
 
-.aside ul {
+.mobileMainMenu ul {
   list-style: none;
   margin: 10px 10px;
   width: 100%;
 }
-.aside ul li {
+.mobileMainMenu ul li {
   display: flex;
   margin-bottom: 20px;
   font-size: 18px;
@@ -33,7 +36,7 @@
   text-align: left;
   padding-bottom: 5px;
 }
-.aside ul li.active {
+.mobileMainMenu ul li.active {
   background-color: rgba(0, 0, 255, 0.2);
   border-radius: 5px;
 }
@@ -48,14 +51,28 @@
   color: #000;
   width: 70%;
 }
+.expandMain {
+  width: 70%;
+}
 .header {
+  position: fixed;
   display: flex;
   background-color: #fff;
   color: #000;
+  border-bottom: 2px solid #ede9e9;
   justify-content: space-between;
   padding: 5px 20px;
   width: 100%;
   height: 80px;
+  z-index: 10;
+}
+.header .adminIcon{
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+}
+.header .adminIcon h2{
+    margin: 3px 15px;
 }
 .header ul {
   display: flex;
@@ -66,16 +83,52 @@
 .header ul li {
   margin: 0 10px;
 }
-.hambuger{
-    margin: 20px;
-    display: none;
-    z-index: 4;
+.hambuger {
+  position: fixed;
+  top: 20px;
+  left: 350px;
+  cursor: pointer;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+}
+.hambugerTop,
+.hambugerMiddle,
+.hambugerButtom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: #000;
+  transition: all 0.5s;
+}
+.hambugerMiddle {
+  transform: translateY(5px);
+}
+.hambugerButtom {
+  transform: translateY(10px);
+}
+.open {
+  transform: rotate(90deg);
+}
+.open .hambugerTop {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+.open .hambugerMiddle {
+  display: none;
+}
+.open .hambugerButtom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
 .form {
+    margin-left: 20px;
   padding: 10px;
   align-items: center;
   justify-content: center;
-  width: 60%;
+  width: 40%;
 }
 .form input {
   border: none;
@@ -175,10 +228,6 @@
   width: 100%;
 }
 @media (max-width: 960px) {
-
- 
-
-
   .dashboardBody ul {
     display: flex;
     flex-wrap: wrap;
@@ -195,39 +244,50 @@
   }
 }
 @media (max-width: 600px) {
-.main{
-    width: 100%;
+    .mobileMainMenu{
+        transform: translateX(-100%);
+    }
+    .hideMenu {
+  transform: translateX(0%);
 }
+    .header .adminIcon{
+        display: none;
+    }
+    .hambuger{
+        top: 26px;
+        left: 15px;
+    }
+    .header .form{
+        margin-top: 5px;
+      padding-left: 20px;
+        width: 60%;
+    }
+  .main {
+    width: 100%;
+  }
   .main .dashboardBody ul li {
     width: 100%;
     margin: 5px 20px;
   }
-  .aside{
-    display: none;
-    width: 100%;
-  }
-  .hambuger{
-    /* position: fixed; */
-    display: block;
-    /* margin-left: 300px; */
+  .mobileMainMenu {
     /* display: none; */
+    width: 70%;
   }
-  
-  .orderInfo{
+
+  .orderInfo {
     display: flex;
     height: auto;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
   }
-  .userId ul{
+  .userId ul {
     display: flex;
     flex-direction: column;
-    
   }
-.userDetails ul{
+  .userDetails ul {
     display: flex;
     flex-direction: column;
-     margin: 0 10px;
-}
+    margin: 0 10px;
+  }
 }
