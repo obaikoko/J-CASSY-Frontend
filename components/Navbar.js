@@ -36,43 +36,55 @@ const Navbar = () => {
       >
         <ul>
           <li className={style.mobileOnly}>
-            <Link href='/' className={style.navLink}>
+            <Link href='/' onClick={menuBtnClicked} className={style.navLink}>
               home
             </Link>
           </li>
           <li className={style.mobileOnly}>
-            <Link href='/about' className={style.navLink}>
+            <Link
+              href='/about'
+              onClick={menuBtnClicked}
+              className={style.navLink}
+            >
               about
             </Link>
           </li>
           <li className={style.mobileOnly}>
-            <Link href='/gallery' className={style.navLink}>
+            <Link
+              href='/gallery'
+              onClick={menuBtnClicked}
+              className={style.navLink}
+            >
               Gallery
             </Link>
           </li>
           <li className={style.mobileOnly}>
-            <Link href='/cart' className={style.navLink}>
+            <Link
+              href='/cart'
+              onClick={menuBtnClicked}
+              className={style.navLink}
+            >
               cart
             </Link>
           </li>
 
           <li>
-            <Link href='/' className={style.navLink}>
+            <Link href='/' onClick={menuBtnClicked} className={style.navLink}>
               new arrivals
             </Link>
           </li>
           <li>
-            <Link href='/' className={style.navLink}>
+            <Link href='/' onClick={menuBtnClicked} className={style.navLink}>
               promo
             </Link>
           </li>
           <li>
-            <Link href='/' className={style.navLink}>
+            <Link href='/' onClick={menuBtnClicked} className={style.navLink}>
               services
             </Link>
           </li>
           <li>
-            <Link href='/' className={style.navLink}>
+            <Link href='/' onClick={menuBtnClicked} className={style.navLink}>
               out of stock
             </Link>
           </li>

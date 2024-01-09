@@ -35,6 +35,7 @@ function Dashboard() {
 
   const menuBtnClicked = () => {
     setIsOpen(!open);
+      document.body.classList.toggle('stopScrolling');
   };
   const onClick = () => {
     dispatch(logout());
@@ -43,6 +44,7 @@ function Dashboard() {
   };
   return (
     <>
+      <div id='overlayShow' className={open ? `${style.overlay}` : ''}></div>
       <div className={style.container}>
         <aside
           className={

@@ -1,3 +1,13 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  overflow: hidden;
+}
 .container {
   position: relative;
   display: flex;
@@ -84,6 +94,7 @@
   margin: 0 10px;
 }
 .hambuger {
+    display: none;
   position: fixed;
   top: 20px;
   left: 350px;
@@ -254,6 +265,7 @@
         display: none;
     }
     .hambuger{
+        display: block;
         top: 26px;
         left: 15px;
     }
