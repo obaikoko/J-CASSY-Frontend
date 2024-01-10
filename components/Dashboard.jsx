@@ -37,6 +37,9 @@ function Dashboard() {
     setIsOpen(!open);
     document.body.classList.toggle('stopScrolling');
   };
+  const asideBtnClicked = () =>{
+    
+  }
   const onClick = () => {
     dispatch(logout());
     dispatch(reset());
@@ -63,7 +66,7 @@ function Dashboard() {
               </button>
             </li>
             <li>
-              <button>
+              <button onClick={asideBtnClicked}>
                 <div className={style.icon}>
                   <FaShoppingBasket />
                 </div>
@@ -179,7 +182,7 @@ function Dashboard() {
         </header>
         <main
           className={
-            open ? `${style.main} ${style.expandMain}` : `${style.main}`
+            open ? `${style.dashboard} ${style.expandMain}` : `${style.dashboard}`
           }
         >
           <div className={style.dashboardBody}>

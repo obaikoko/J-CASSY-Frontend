@@ -25,7 +25,7 @@ function Login() {
       dispatch(reset());
     }
     if (user || isSuccess) {
-      navigate.push('/');
+      navigate.push('/dashboard');
     }
   }, [user, isError]);
 

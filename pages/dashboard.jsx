@@ -1,9 +1,33 @@
-import React from 'react'
+import Dashboard from '@/components/Dashboard';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 function dashboard() {
+    const user = useSelector((state) => state.auth.user);
+    const [isLoggedIn, setIsLoggedIn] = useState('');
+    const navigate = useRouter()
+
+    useEffect(() => {
+      if (!user) {
+        navigate.push('/')
+      }
+      setIsLoggedIn(user);
+    }, [user]);
+
   return (
-    <div>dashboard</div>
-  )
+    <>
+      {isLoggedIn && isLoggedIn.role == 'Admin' ? (
+        <>
+          
+          <Dashboard />
+        </>
+      ) : (
+        <></>
+      )}
+    </>
+  );
 }
 
-export default dashboard
+export default dashboard;

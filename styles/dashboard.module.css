@@ -58,17 +58,12 @@
 .icon {
   margin-right: 10px;
 }
-.main {
-  position: absolute;
-  top: 80px;
-  right: 0;
-  background-color: #f5efef;
+.logout {
+  display: flex;
+  text-decoration: none;
   color: #000;
-  width: 70%;
 }
-.expandMain {
-  width: 70%;
-}
+
 .header {
   position: fixed;
   display: flex;
@@ -171,6 +166,19 @@
   width: 100%;
   border-radius: 50%;
 }
+
+/* DASHBOARD */
+.dashboard {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: #f5efef;
+  color: #000;
+  width: 70%;
+}
+.expandMain {
+  width: 70%;
+}
 .dashboardBody h2 {
   padding: 20px;
 }
@@ -188,14 +196,11 @@
   padding: 20px;
   width: 40%;
 }
-.logout {
-  display: flex;
-  text-decoration: none;
-  color: #000;
-}
-.main.text {
+.dashboard.text {
   display: flex;
 }
+
+
 .chart {
   background-color: #fff;
   display: flex;
@@ -279,10 +284,10 @@
     padding-left: 20px;
     width: 60%;
   }
-  .main {
+  .dashboard {
     width: 100%;
   }
-  .main .dashboardBody ul li {
+  .dashboard .dashboardBody ul li {
     width: 100%;
     margin: 5px 20px;
   }
