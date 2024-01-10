@@ -78,7 +78,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href='/dashboard'
+                  href='/admin'
                   onClick={menuBtnClicked}
                   className={style.navLink}
                 >

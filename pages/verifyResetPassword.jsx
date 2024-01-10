@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { toast } from 'react-toastify';
 import { useEffect } from 'react';
+import style from '../styles/login.module.css';
 import Spinner from '@/components/Spinner';
 
 function verifyPassword() {
@@ -51,7 +52,8 @@ function verifyPassword() {
     return <Spinner />;
   }
   return (
-    <div className='container'>
+    <div className={style.container}>
+      <div className={style.loginBg}></div>
       <div className='row justify-content-center mt-5'>
         <div className='col-md-6'>
           <div className='card'>
@@ -59,19 +61,18 @@ function verifyPassword() {
               <h4 className='text-center'>Enter OTP</h4>
             </div>
             <div className='card-body'>
-              <form onSubmit={onSubmit}>
-                <div className='form-group'>
+              <form className={style.form} onSubmit={onSubmit}>
+                <div className={style.formGroup}>
                   <label htmlFor='email'>Confirm Email</label>
                   <input
                     type='email'
                     name='email'
-                    className='form-control'
                     id='email'
                     value={email}
                     onChange={onChange}
                   />
                 </div>
-                <div className='form-group'>
+                <div className={style.formGroup}>
                   <label htmlFor='otp'>OTP</label>
                   <input
                     type='password'
@@ -82,7 +83,7 @@ function verifyPassword() {
                     onChange={onChange}
                   />
                 </div>
-                <div className='form-group'>
+                <div className={style.formGroup}>
                   <label htmlFor='password'>New Password</label>
                   <input
                     type='password'

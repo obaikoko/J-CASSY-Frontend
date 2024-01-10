@@ -18,7 +18,7 @@ function Login() {
 
   const { user, isSuccess, isLoading, isError, message } = useSelector(
     (state) => state.auth
-  )
+  );
 
   useEffect(() => {
     if (isError) {
@@ -45,13 +45,13 @@ function Login() {
 
     dispatch(login(userData));
   };
- if (isLoading) {
-   return (
-     <div className={style.loading}>
-       <Spinner />;
-     </div>
-   );
- }
+  if (isLoading) {
+    return (
+      <div className={style.loading}>
+        <Spinner />;
+      </div>
+    );
+  }
   return (
     <div className={style.container}>
       <div className={style.loginBg}></div>
