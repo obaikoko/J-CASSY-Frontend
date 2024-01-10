@@ -58,71 +58,71 @@ function Dashboard() {
         >
           <ul>
             <li className={style.active}>
-              <button>
+              <Link className={style.asideLink} href='/dashboard'>
                 <div className={style.icon}>
                   <FaTv />
                 </div>
                 Dashboard
-              </button>
+              </Link>
             </li>
             <li>
-              <button onClick={asideBtnClicked}>
+              <Link className={style.asideLink} href='/product'>
                 <div className={style.icon}>
                   <FaShoppingBasket />
                 </div>
                 Products
-              </button>
+              </Link>
             </li>
             <li>
-              <button>
+              <Link className={style.asideLink} href='/'>
                 <div className={style.icon}>
                   <FaShoppingCart />
                 </div>
                 Orders
-              </button>
+              </Link>
             </li>
             <li>
-              <button>
+              <Link className={style.asideLink} href='/'>
                 <div className={style.icon}>
                   <FaUsers />
                 </div>
                 Customers
-              </button>
+              </Link>
             </li>
             <li>
-              <button>
+              <Link className={style.asideLink} href='/'>
                 <div className={style.icon}>
                   <FaChartBar />
                 </div>
                 Statistics
-              </button>
+              </Link>
             </li>
             <li>
-              <button>
+              <Link className={style.asideLink} href='/'>
                 <div className={style.icon}>
                   <FaStar />
                 </div>
                 Reviews
-              </button>
+              </Link>
             </li>
             <li>
-              <button>
+              <Link className={style.asideLink} href='/'>
                 <div className={style.icon}>
                   <FaMoneyBill />
                 </div>
                 Transactions
-              </button>
+              </Link>
             </li>
             <li>
-              <button>
+              <Link className={style.asideLink} href='/'>
                 <div className={style.icon}>
                   <FaCogs />
                 </div>
                 Settings
-              </button>
+              </Link>
             </li>
             <li>
-              <button className={style.logout}  onClick={onClick}>
+              <button className={style.asideLink} onClick={onClick}>
                 <div className={style.icon}>
                   <FaSignOutAlt />
                 </div>
@@ -182,7 +182,9 @@ function Dashboard() {
         </header>
         <main
           className={
-            open ? `${style.dashboard} ${style.expandMain}` : `${style.dashboard}`
+            open
+              ? `${style.dashboard} ${style.expandMain}`
+              : `${style.dashboard}`
           }
         >
           <div className={style.dashboardBody}>

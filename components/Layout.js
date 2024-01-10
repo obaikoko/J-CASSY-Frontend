@@ -1,7 +1,17 @@
 import Navbar from './Navbar';
 import Link from 'next/link';
 import style from '../styles/layout.module.css';
+import { useSelector } from 'react-redux';
+import Dashboard from './Dashboard';
+import { useState, useEffect } from 'react';
 function Layout({ children }) {
+  const user = useSelector((state) => state.auth.user);
+  const [isLoggedIn, setIsLoggedIn] = useState('');
+
+  useEffect(() => {
+    setIsLoggedIn(user);
+  }, [user]);
+
   return (
     <>
       <Navbar />

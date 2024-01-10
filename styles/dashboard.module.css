@@ -37,13 +37,15 @@
   margin: 10px 10px;
   width: 100%;
 }
-.mobileMainMenu ul li button {
+.mobileMainMenu ul li .asideLink {
+  text-decoration: none;
+  color: #000;
   display: flex;
-  margin-bottom: 20px;
   font-size: 18px;
   padding: 10px;
   width: 90%;
   text-align: left;
+  margin-bottom: 20px;
   padding-bottom: 5px;
 }
 
@@ -83,6 +85,7 @@
 }
 .header .adminIcon h2 {
   margin: 3px 15px;
+
 }
 .header ul {
   display: flex;
