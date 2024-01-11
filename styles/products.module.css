@@ -11,7 +11,7 @@
   }
 .container {
   position: relative;
-  width: 100vw;
+  width: 100%;
   /* height: 100vh; */
 }
 .galleryBg {
@@ -39,7 +39,8 @@
 .galleryItems {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 10px;
+  margin: 10px 70px;
+background-color: #fff;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -47,7 +48,7 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
-  width: 20%;
+  width: 25%;
   border-radius: 10px;
   border: 1px solid #aaa;
   align-items: center;
@@ -57,7 +58,7 @@
 
 .galleryImg {
   background-color: #fff;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 20px;
   border-radius: 50%;
   width: 100px;
@@ -80,22 +81,11 @@
 .galleryItem ul li {
   margin-bottom: 10px;
 }
-.galleryBtn {
-  border-radius: 5px;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.galleryBtn button {
-  margin: 2px;
-  padding: 5px;
-  border-radius: 5px;
-  cursor: pointer;
+.productBtn button{
+  background-color: transparent;
   border: none;
-  color: #000;
-  background-color: rgba(0, 0, 255, 0.2);
+  margin: 0 5px;
+  cursor: pointer;
 }
 @media (max-width: 960px) {
   .galleryTitle {

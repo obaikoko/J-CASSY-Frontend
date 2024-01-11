@@ -5,7 +5,6 @@ import {
   FaCartArrowDown,
   FaShoppingBag,
 } from 'react-icons/fa';
-
 function Dashboard() {
   return (
     <>

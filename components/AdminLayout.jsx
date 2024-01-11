@@ -19,6 +19,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { logout, reset } from '@/src/features/auth/authSlice';
 import Dashboard from './Dashboard';
 import Products from './Products';
+import Orders from './Orders';
+import Statistics from './Statistics';
+import Review from './Review';
+import Custormers from './Custormers';
+import Transaction from './Transaction';
+import Settings from './Settings';
 
 function AdminLayout() {
   const dispatch = useDispatch();
@@ -32,7 +38,6 @@ function AdminLayout() {
 
   const menuBtnClicked = () => {
     setIsOpen(!open);
-    document.body.classList.toggle('stopScrolling');
   };
 
   const onClick = () => {
@@ -44,9 +49,8 @@ function AdminLayout() {
   const [selectedSection, setSelectedSection] = useState('dashboard');
 
   const handleSectionChange = (sectionName) => {
-     setIsOpen(!open);
+    setIsOpen(!open);
     setSelectedSection(sectionName);
-
   };
   return (
     <div>
@@ -142,7 +146,7 @@ function AdminLayout() {
             <FaLaptopCode />
           </h1>
           <h2>ADMINISTRATOR</h2>
-        </Link >
+        </Link>
         {/* Hambuger Menu */}
         <button
           id='menuBtn'
@@ -185,13 +189,15 @@ function AdminLayout() {
           </li>
         </ul>
       </header>
-      <main
-        className={
-          open ? `${style.dashboard} ${style.expandMain}` : `${style.dashboard}`
-        }
-      >
+      <main className={style.main}>
         {selectedSection === 'dashboard' && <Dashboard />}
         {selectedSection === 'products' && <Products />}
+        {selectedSection === 'orders' && <Orders />}
+        {selectedSection === 'customers' && <Custormers />}
+        {selectedSection === 'statistics' && <Statistics />}
+        {selectedSection === 'reviews' && <Review />}
+        {selectedSection === 'transactions' && <Transaction />}
+        {selectedSection === 'settings' && <Settings />}
       </main>
     </div>
   );
