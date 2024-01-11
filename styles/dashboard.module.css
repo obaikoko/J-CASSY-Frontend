@@ -5,7 +5,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  z-index: 8;
   overflow: hidden;
   display: none;
 }
@@ -22,7 +22,7 @@
   left: 0;
   width: 20%;
   height: 100%;
-  z-index: 3;
+  z-index: 9;
   background-color: #fff;
   color: #000;
   display: flex;
@@ -176,6 +176,7 @@
   background-color: #f5efef;
   color: #000;
   width: 80%;
+  z-index: 7;
 }
 
 .dashboardBody h2 {
@@ -195,7 +196,6 @@
   padding: 20px;
   width: 40%;
 }
-
 
 .chart {
   background-color: #fff;
@@ -244,7 +244,6 @@
   margin: 0 20px;
   width: 100%;
 }
-
 
 @media (max-width: 960px) {
   .dashboardBody ul {

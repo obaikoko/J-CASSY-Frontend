@@ -1,20 +1,20 @@
-  .loading {
-    width: 100vw;
-    height: 100vh;
-  }
-  .error {
-    width: 50vw;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.loading {
+  width: 100vw;
+  height: 100vh;
+}
+.error {
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .container {
   position: relative;
   width: 100%;
   /* height: 100vh; */
 }
-.galleryBg {
+/* .galleryBg {
   position: absolute;
   background-image: url('https://res.cloudinary.com/dzajrh9z7/image/upload/v1703253114/J-Cassy/TOINO-ABEL---Clutch-Bag---Natural-Straw-Blue-Dark-Green---N36---Credit-Marta-Rubio-2_s0klur.jpg');
   background-position: center center;
@@ -24,31 +24,28 @@
   height: 100%;
   z-index: -1;
   filter: blur(8px);
-}
+} */
 .gallery {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.galleryTitle {
-  margin-top: 8%;
-  font-family: 'Courier New', Courier, monospace;
+  background-color: #fff;
+  margin: 2px;
 }
 
 .galleryItems {
   display: flex;
   flex-wrap: wrap;
-  margin: 10px 70px;
-background-color: #fff;
+  background-color: #fff;
   align-items: center;
   justify-content: space-evenly;
 }
 .galleryItem {
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  width: 25%;
+  padding: 5px;
+  width: 15%;
   border-radius: 10px;
   border: 1px solid #aaa;
   align-items: center;
@@ -81,11 +78,18 @@ background-color: #fff;
 .galleryItem ul li {
   margin-bottom: 10px;
 }
-.productBtn button{
+.productBtn button {
   background-color: transparent;
   border: none;
   margin: 0 5px;
   cursor: pointer;
+}
+.galleryBtn button {
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  color: #000;
+  background-color:transparent;
 }
 @media (max-width: 960px) {
   .galleryTitle {
@@ -97,13 +101,12 @@ background-color: #fff;
 }
 @media (max-width: 600px) {
   .galleryTitle {
-    margin-top: 120px;
+    margin-top: 10px;
   }
   .galleryItems {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    width: 100%;
+    width: 70%;
   }
   .galleryItem {
     display: flex;
@@ -117,9 +120,4 @@ background-color: #fff;
   .galleryImg {
     margin-bottom: 0px;
   }
-
-  .galleryItem ul li h1 {
-    font-size: 30px;
-  }
-
 }
