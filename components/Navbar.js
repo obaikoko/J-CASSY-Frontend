@@ -121,51 +121,7 @@ const Navbar = () => {
                   out of stock
                 </Link>
               </li>
-              <li>
-                <Link
-                  href='/product'
-                  onClick={menuBtnClicked}
-                  className={style.navLink}
-                >
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href='/0rders'
-                  onClick={menuBtnClicked}
-                  className={style.navLink}
-                >
-                  Orders
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href='/'
-                  onClick={menuBtnClicked}
-                  className={style.navLink}
-                >
-                  Customers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href='/'
-                  onClick={menuBtnClicked}
-                  className={style.navLink}
-                >
-                  Transactions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href='/'
-                  onClick={menuBtnClicked}
-                  className={style.navLink}
-                >
-                  Settings
-                </Link>
-              </li>
+             
 
               <li className={style.mobileOnly}>
                 <Link href='/login' className={style.navLink} onClick={onClick}>

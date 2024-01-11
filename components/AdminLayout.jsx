@@ -137,12 +137,12 @@ function AdminLayout() {
         </ul>
       </aside>
       <header className={style.header}>
-        <div className={style.adminIcon}>
+        <Link href='/' className={style.adminIcon}>
           <h1>
             <FaLaptopCode />
           </h1>
           <h2>ADMINISTRATOR</h2>
-        </div>
+        </Link >
         {/* Hambuger Menu */}
         <button
           id='menuBtn'
