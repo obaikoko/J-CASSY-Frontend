@@ -10,6 +10,10 @@ function ProductCard({ good, admin }) {
   const onClick = (good) => {
     dispatch(addToCart(good));
   };
+  const deleteProduct = (good) => {
+    dispatch(deleteProduct(good))
+  }
+  
   return (
     <div className={style.galleryItem}>
       <div className={style.galleryImg}>
@@ -28,7 +32,7 @@ function ProductCard({ good, admin }) {
           {admin ? (
             <div className={style.productBtn}>
               <button style={{ color: 'green' }}>Edit</button>
-              <button style={{ color: 'red' }}>Delete</button>
+              <button onClick={() => deleteProduct(good)} style={{ color: 'red' }}>Delete</button>
             </div>
           ) : (
             <div className={style.galleryBtn}>

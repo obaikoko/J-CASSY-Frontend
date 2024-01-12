@@ -46,11 +46,15 @@ function AdminLayout() {
     window.location.reload();
   };
 
-  const [selectedSection, setSelectedSection] = useState('dashboard');
+  const [selectedSection, setSelectedSection] = useState(() => {
+    // Initialize with the value from localStorage, or default to 'dashboard'
+    return localStorage.getItem('selectedSection') || 'dashboard';
+  });
 
   const handleSectionChange = (sectionName) => {
     setIsOpen(!open);
     setSelectedSection(sectionName);
+    localStorage.setItem('selectedSection', sectionName); // Save to localStorage
   };
   return (
     <div>
