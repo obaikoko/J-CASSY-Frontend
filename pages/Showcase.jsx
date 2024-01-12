@@ -75,50 +75,40 @@ function Showcase() {
       </section>
       <section className={style.newArrivalsSection}>
         <h1>New Arrivals</h1>
-        <div className={style.newArrivalsContainer}>
-          <div className={style.newArrival}>
-            <div className={style.newArrivalImg}>
-              <img
-                src='http://res.cloudinary.com/dzajrh9z7/image/upload/v1703634625/J-Cassy/zxamzmwpvkwj3eflmlnw.jpg'
-                alt=''
-              />
+        <div className={style.newArrivalBg}>
+          <div className={style.newArrivalsContainer}>
+            <div className={style.newArrival}>
+              <div className={style.newArrivalImg}>
+                <img
+                  src='http://res.cloudinary.com/dzajrh9z7/image/upload/v1703634625/J-Cassy/zxamzmwpvkwj3eflmlnw.jpg'
+                  alt=''
+                />
+              </div>
             </div>
-            <Link className={style.link} href=''>
-              view
-            </Link>
-          </div>
-          <div className={style.newArrival}>
-            <div className={style.newArrivalImg}>
-              <img
-                src='http://res.cloudinary.com/dzajrh9z7/image/upload/v1703633412/J-Cassy/skoinfk5hcuqn7hjumkw.jpg'
-                alt=''
-              />
+            <div className={style.newArrival}>
+              <div className={style.newArrivalImg}>
+                <img
+                  src='http://res.cloudinary.com/dzajrh9z7/image/upload/v1703633412/J-Cassy/skoinfk5hcuqn7hjumkw.jpg'
+                  alt=''
+                />
+              </div>
             </div>
-            <Link className={style.link} href=''>
-              view
-            </Link>
-          </div>
-          <div className={style.newArrival}>
-            <div className={style.newArrivalImg}>
-              <img
-                src='http://res.cloudinary.com/dzajrh9z7/image/upload/v1703633023/J-Cassy/ltmjiweekcupmp7nom49.jpg'
-                alt=''
-              />
+            <div className={style.newArrival}>
+              <div className={style.newArrivalImg}>
+                <img
+                  src='http://res.cloudinary.com/dzajrh9z7/image/upload/v1703633023/J-Cassy/ltmjiweekcupmp7nom49.jpg'
+                  alt=''
+                />
+              </div>
             </div>
-            <Link className={style.link} href=''>
-              view
-            </Link>
-          </div>
-          <div className={style.newArrival}>
-            <div className={style.newArrivalImg}>
-              <img
-                src='http://res.cloudinary.com/dzajrh9z7/image/upload/v1703633252/J-Cassy/n9cxw9eqfu7q2sktasiv.jpg'
-                alt=''
-              />
+            <div className={style.newArrival}>
+              <div className={style.newArrivalImg}>
+                <img
+                  src='http://res.cloudinary.com/dzajrh9z7/image/upload/v1703633252/J-Cassy/n9cxw9eqfu7q2sktasiv.jpg'
+                  alt=''
+                />
+              </div>
             </div>
-            <Link className={style.link} href=''>
-              view
-            </Link>
           </div>
         </div>
       </section>
@@ -142,7 +132,6 @@ function Showcase() {
           </Link>
         </div>
       </section>
-
 
       <section className={`${style.sections} ${style.sectionE}`}>
         <div className={style.sectionInner}>
