@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   addProduct,
   updateProduct,
 } from '@/src/features/products/productSlice';
 import { toast } from 'react-toastify';
+import style from '../styles/modal.module.css'
 const updateProductForm = ({ product, id }) => {
+  const [modalOpen, setModalOpen] = useState(false);
   const [fileInput, setFileInput] = useState('');
   const [previewSource, setPreviewSource] = useState('');
   const dispatch = useDispatch();
@@ -55,16 +57,106 @@ const updateProductForm = ({ product, id }) => {
     if (isError) {
       toast.error(message);
     }
-    //   setFormData({
-    //     title: '',
-    //     description: '',
-    //     category: '',
-    //     price: '',
-    //   });
+      // setFormData({
+      //   title: '',
+      //   description: '',
+      //   category: '',
+      //   price: '',
+      // });
+ 
   };
+  const onClick = () => {
+    setModalOpen(!modalOpen)
+  }
   return (
     <>
-      <button
+      <button onClick={onClick}>update</button>
+
+      <form
+        className={modalOpen ? ` ${style.modal} ` : `${style.modalOpen}`}
+        onSubmit={onSubmit}
+      >
+        <div className={style.formGroup}>
+          <label htmlFor='title' className='form-label'>
+            Title
+          </label>
+          <input
+            type='text'
+            name='title'
+            id='title'
+            value={title}
+            onChange={onChange}
+            className='form-control'
+          />
+        </div>
+        <div className={style.formGroup}>
+          <label htmlFor='description' className='form-label'>
+            Description
+          </label>
+          <input
+            type='text'
+            name='description'
+            id='description'
+            value={description}
+            onChange={onChange}
+            className='form-control'
+          />
+        </div>
+
+        <div className={style.formGroup}>
+          <label htmlFor='price' className='form-label'>
+            Price
+          </label>
+          <input
+            type='text'
+            name='price'
+            id='price'
+            value={price}
+            onChange={onChange}
+            className='form-control'
+          />
+        </div>
+        <div className={style.formGroup}>
+          <label htmlFor='category' className='form-label'>
+            Category
+          </label>
+          <select
+            name='category'
+            id='category'
+            className='form-select'
+            onChange={onChange}
+          >
+            <option value=''>select category</option>
+            <option value='Men'>Men </option>
+            <option value='Women'>Women </option>
+            <option value='Unisex'>Unisex </option>
+          </select>
+        </div>
+        <div className={style.formGroup}>
+          <label htmlFor='fileInput' className='form-label'>
+            Image
+          </label>
+          <input
+            type='file'
+            id='fileInput'
+            onChange={handleInputChange}
+            value={fileInput}
+            className='form-control'
+          />
+        </div>
+
+        <div>
+          {previewSource && (
+            <img src={previewSource} alt='' className='img-fluid' />
+          )}
+        </div>
+        <button >
+          submit
+        </button>
+        
+      </form>
+
+      {/* <button
         type='button'
         className='btn text-success mr-2'
         data-bs-toggle='modal'
@@ -182,7 +274,7 @@ const updateProductForm = ({ product, id }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

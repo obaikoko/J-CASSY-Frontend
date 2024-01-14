@@ -37,9 +37,9 @@ function ProductDetails() {
     }
   }, [isSuccess, product]);
 
-  // const onClick = () => {
-  //   dispatch(deleteProduct(id));
-  // };
+  const onClick = () => {
+    dispatch(deleteProduct(id));
+  };
 
   if (isLoading) {
     return <Spinner />;
@@ -57,10 +57,10 @@ function ProductDetails() {
             <p>Description: {data.description} </p>
             <p>Category: {data.category}</p>
             <p>Price: ${data.price}</p>
-            {/* <div className='mt-3 d-flex'>
+            <div className='mt-3 d-flex'>
               {admin && admin.role === 'Admin' ? (
-                <div className=''>
-                  <button onClick={onClick} className='btn text-danger mr-2'>
+                <div className={style.productBtn}>
+                  <button onClick={onClick} >
                     Delete
                   </button>
                   <UpdateProductForm product={data} id={id} />
@@ -68,7 +68,7 @@ function ProductDetails() {
               ) : (
                 <></>
               )}
-            </div> */}
+            </div>
           </div>
         </div>
       ) : (

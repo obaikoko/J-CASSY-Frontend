@@ -12,19 +12,8 @@
 .container {
   position: relative;
   width: 100%;
-  /* height: 100vh; */
 }
-/* .galleryBg {
-  position: absolute;
-  background-image: url('https://res.cloudinary.com/dzajrh9z7/image/upload/v1703253114/J-Cassy/TOINO-ABEL---Clutch-Bag---Natural-Straw-Blue-Dark-Green---N36---Credit-Marta-Rubio-2_s0klur.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  filter: blur(8px);
-} */
+
 .gallery {
   display: flex;
   flex-direction: column;
@@ -72,25 +61,19 @@
   align-items: center;
   justify-content: center;
   list-style: none;
-  text-transform: uppercase;
   margin: 0 10px;
 }
 .galleryItem ul li {
   margin-bottom: 10px;
 }
-.productBtn button {
+.productLink {
   background-color: transparent;
+  text-decoration: none;
   border: none;
   margin: 0 5px;
   cursor: pointer;
 }
-.galleryBtn button {
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-  color: #000;
-  background-color:transparent;
-}
+
 @media (max-width: 960px) {
   .galleryTitle {
     margin-top: 120px;

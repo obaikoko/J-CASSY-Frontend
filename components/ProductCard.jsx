@@ -10,10 +10,8 @@ function ProductCard({ good, admin }) {
   const onClick = (good) => {
     dispatch(addToCart(good));
   };
-  const deleteProduct = (good) => {
-    dispatch(deleteProduct(good))
-  }
-  
+
+
   return (
     <div className={style.galleryItem}>
       <div className={style.galleryImg}>
@@ -26,17 +24,18 @@ function ProductCard({ good, admin }) {
           <p>{good.title}</p>
         </li>
         <li>
-          <h4>Price: ${good.price}</h4>
+          <h5>Price: ${good.price}</h5>
         </li>
         <li>
           {admin ? (
-            <div className={style.productBtn}>
-              <button style={{ color: 'green' }}>Edit</button>
-              <button onClick={() => deleteProduct(good)} style={{ color: 'red' }}>Delete</button>
+            <div>
+              <Link className={style.productLink} href={`products/${good._id}`}>
+                Details
+              </Link>
             </div>
           ) : (
             <div className={style.galleryBtn}>
-              <button className='btn btn-primary' onClick={() => onClick(good)}>
+              <button  onClick={() => onClick(good)}>
                 Add to Cart
               </button>
             </div>

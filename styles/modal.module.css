@@ -1,0 +1,48 @@
+.modal {
+  position: absolute;
+  top: 5%;
+  left: 25%;
+  border-radius: 10px;
+  width: 700px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  width: 300px;
+}
+.formGroup label {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: bold;
+  font-weight: 300px;
+  color: #fff;
+  cursor: pointer;
+  transform: translateY(-5px);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.formGroup label:hover {
+  transform: translateY(0px);
+}
+.formGroup input {
+  background-color: transparent;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 2px solid#fff;
+  padding: 5px 0;
+  color: #fff;
+}
+.formGroup input:focus {
+  outline: none;
+}
+
+.modalOpen {
+  display: none;
+}
