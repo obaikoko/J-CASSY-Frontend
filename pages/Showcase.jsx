@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
 function Showcase() {
-    const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const testimonials = [
     {
@@ -51,15 +51,13 @@ function Showcase() {
     },
   ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 10000);
 
-     useEffect(() => {
-       const interval = setInterval(() => {
-         setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-       }, 10000); 
-
-       return () => clearInterval(interval);
-     }, [testimonials.length]);
-
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
 
   return (
     <>
@@ -75,39 +73,37 @@ function Showcase() {
       </section>
       <section className={style.newArrivalsSection}>
         <h1>New Arrivals</h1>
-        <div className={style.newArrivalBg}>
-          <div className={style.newArrivalsContainer}>
-            <div className={style.newArrival}>
-              <div className={style.newArrivalImg}>
-                <img
-                  src='http://res.cloudinary.com/dzajrh9z7/image/upload/v1703634625/J-Cassy/zxamzmwpvkwj3eflmlnw.jpg'
-                  alt=''
-                />
-              </div>
+        <div className={style.newArrivalsContainer}>
+          <div className={style.newArrival}>
+            <div className={style.newArrivalImg}>
+              <img
+                src='http://res.cloudinary.com/dzajrh9z7/image/upload/v1703634625/J-Cassy/zxamzmwpvkwj3eflmlnw.jpg'
+                alt=''
+              />
             </div>
-            <div className={style.newArrival}>
-              <div className={style.newArrivalImg}>
-                <img
-                  src='http://res.cloudinary.com/dzajrh9z7/image/upload/v1703633412/J-Cassy/skoinfk5hcuqn7hjumkw.jpg'
-                  alt=''
-                />
-              </div>
+          </div>
+          <div className={style.newArrival}>
+            <div className={style.newArrivalImg}>
+              <img
+                src='http://res.cloudinary.com/dzajrh9z7/image/upload/v1703633412/J-Cassy/skoinfk5hcuqn7hjumkw.jpg'
+                alt=''
+              />
             </div>
-            <div className={style.newArrival}>
-              <div className={style.newArrivalImg}>
-                <img
-                  src='http://res.cloudinary.com/dzajrh9z7/image/upload/v1703633023/J-Cassy/ltmjiweekcupmp7nom49.jpg'
-                  alt=''
-                />
-              </div>
+          </div>
+          <div className={style.newArrival}>
+            <div className={style.newArrivalImg}>
+              <img
+                src='http://res.cloudinary.com/dzajrh9z7/image/upload/v1703633023/J-Cassy/ltmjiweekcupmp7nom49.jpg'
+                alt=''
+              />
             </div>
-            <div className={style.newArrival}>
-              <div className={style.newArrivalImg}>
-                <img
-                  src='http://res.cloudinary.com/dzajrh9z7/image/upload/v1703633252/J-Cassy/n9cxw9eqfu7q2sktasiv.jpg'
-                  alt=''
-                />
-              </div>
+          </div>
+          <div className={style.newArrival}>
+            <div className={style.newArrivalImg}>
+              <img
+                src='http://res.cloudinary.com/dzajrh9z7/image/upload/v1703633252/J-Cassy/n9cxw9eqfu7q2sktasiv.jpg'
+                alt=''
+              />
             </div>
           </div>
         </div>

@@ -81,63 +81,37 @@
 .sectionE {
   background-image: url('https://res.cloudinary.com/dzajrh9z7/image/upload/v1703252752/J-Cassy/colorful-t-shirts-in-front-of-dark-background-ai-generative-free-photo_avtdlx.jpg');
 }
-
 .newArrivalsSection {
-  height: 70vh;
   background-color: #fff;
-  padding: 10px;
   color: #000;
-  text-transform: uppercase;
-}
-.newArrivalBg {
-  animation: linerGrow 10s linear infinite;
-  transform-origin: left;
-}
-
-.newArrivalsContainer {
-  margin-top: 20px;
-  width: 100%;
-  height: 60%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.newArrival {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 400px;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  padding: 10px;
-
 }
-
+.newArrivalsContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  padding: 30px;
+}
 .newArrivalImg {
   width: 200px;
   height: 200px;
+  /* margin: 0 10px; */
 }
 .newArrivalImg img {
-  padding: 20px;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  object-fit: cover;
-}
-
-.newArrivalsSection h1 {
-  text-align: center;
-  font-size: 40px;
-  font-weight: bold;
-}
-.newArrival .link {
-  color: blue;
-  text-decoration: none;
 }
 
 .testimonialSection {
   background-color: #fff;
   width: 100vw;
-  height: 100vh;
+ 
   display: flex;
   padding: 100px auto;
   flex-direction: column;
@@ -147,6 +121,7 @@
 .testimonialSection h1 {
   color: #000;
   text-transform: uppercase;
+  margin-top: 20px;
 }
 .testimonialContainer {
   background-color: #000;
@@ -204,14 +179,14 @@
     transform: scaleX(0);
   }
 }
-@keyframes linerGrow {
+/* @keyframes linerGrow {
   0% {
-    transform: translateX(-90%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateX(90%);
+    transform: translateX(100%);
   }
-}
+} */
 @keyframes rotateGrow {
   0% {
     transform: scaleX(-57%);
@@ -238,45 +213,7 @@
   .sectionInner h2 {
     font-size: 30px;
   }
-  .newArrivalsSection {
-    position: relative;
-    height: 100vh;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-transform: uppercase;
-  }
-  .newArrivalsSection {
-    height: 100%;
-  }
-  .newArrivalBg {
-  animation: rotateGrow 10s linear infinite;
-  transform-origin: center;
-}
-  .newArrivalsContainer {
-    width: 100%;
-  }
-  .newArrival {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 5px;
-    border: none;
-  }
 
-  .newArrivalImg {
-    width: 150px;
-    height: 150px;
-  }
-  .newArrivalImg img {
-    padding: 20px;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  .newArrivalsSection h1 {
-    font-size: 25px;
-  }
   .testimonialSection {
     background-color: #fff;
     color: #000;
