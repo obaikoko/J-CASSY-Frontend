@@ -100,12 +100,13 @@
 .newArrivalImg {
   width: 200px;
   height: 200px;
-  /* margin: 0 10px; */
+    animation: rotateGrow 5s linear infinite;
 }
 .newArrivalImg img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+
 }
 
 .testimonialSection {
@@ -189,10 +190,10 @@
 } */
 @keyframes rotateGrow {
   0% {
-    transform: scaleX(-57%);
+    transform: scaleX(100%);
   }
   100% {
-    transform: scaleX(57%);
+    transform: scaleX(-100%);
   }
 }
 
@@ -214,8 +215,8 @@
     width: 100%;
   }
   .newArrivalImg img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
   }
 }
 @media (max-width: 600px) {
