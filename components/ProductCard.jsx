@@ -13,6 +13,7 @@ function ProductCard({ good, admin }) {
   const deleteProduct = (good) => {
     dispatch(deleteProduct(good))
   }
+ 
   
   return (
     <div className={style.galleryItem}>

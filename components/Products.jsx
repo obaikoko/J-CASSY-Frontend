@@ -18,6 +18,7 @@ function Products() {
   );
   const { user } = useSelector((state) => state.auth);
 
+  
   useEffect(() => {
     dispatch(loadProducts());
     dispatch(getTotal());
@@ -26,6 +27,7 @@ function Products() {
       setGoods(products);
     }
   }, [isSuccess]);
+ 
 
   if (isLoading) {
     return (
