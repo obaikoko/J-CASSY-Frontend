@@ -19,7 +19,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { logout, reset } from '@/src/features/auth/authSlice';
 import Dashboard from './Dashboard';
 import Products from './Products';
-import Orders from './Orders';
+import Order from './Order';
 import Statistics from './Statistics';
 import Review from './Review';
 import Custormers from './Custormers';
@@ -196,7 +196,7 @@ function AdminLayout() {
       <main className={style.main}>
         {selectedSection === 'dashboard' && <Dashboard />}
         {selectedSection === 'products' && <Products />}
-        {selectedSection === 'orders' && <Orders />}
+        {selectedSection === 'orders' && <Order />}
         {selectedSection === 'customers' && <Custormers />}
         {selectedSection === 'statistics' && <Statistics />}
         {selectedSection === 'reviews' && <Review />}

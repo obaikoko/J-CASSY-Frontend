@@ -1,9 +1,9 @@
 .modal {
   position: absolute;
   top: 5%;
-  left: 25%;
+  left: 35%;
   border-radius: 10px;
-  width: 700px;
+  width: 400px;
   height: 500px;
   display: flex;
   flex-direction: column;
@@ -45,4 +45,21 @@
 
 .modalOpen {
   display: none;
+}
+.previewImg{
+    width: 100px;
+    height: 100px;
+}
+.previewImg img{
+     width: 100%;
+     height: 100;
+     border-radius: 20%;
+}
+@media(max-width: 600px) {
+    .modal{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }

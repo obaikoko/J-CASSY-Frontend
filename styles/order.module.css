@@ -1,0 +1,113 @@
+.order {
+  background-color: #fff;
+  padding: 20px;
+  height: 100vh;
+  margin: 10px;
+}
+.header {
+  padding: 20px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid#aaa;
+  border-radius: 10px;
+}
+.headerBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 5px;
+  width: 100px;
+}
+.dateInfo {
+  align-items: center;
+  justify-content: center;
+}
+.dateInfo small {
+  margin-left: 30px;
+}
+.date {
+  display: flex;
+}
+.date h4 {
+  margin-left: 15px;
+}
+.saveBtn {
+  padding: 10px 15px;
+  margin-right: 5px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+.saveBtn:hover{
+  background-color: #000;
+  color: #fff;
+}
+.saveBtn:active{
+  transform: scale(0.9);
+}
+.printBtn {
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+.printBtn:hover{
+  background-color: #000;
+  color: #fff;
+}
+.printBtn:active{
+  transform: scale(0.9);
+}
+.customerInfo {
+  height: 150px;
+  display: flex;
+  padding: 10px;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+.customer{
+  display: flex;
+  padding-top: 15px;
+  width: 300px;
+  height: 100%;
+}
+.customer h1{
+  margin-left: 10px;
+}
+.customerTxt{
+  margin-left: 10px;
+}
+.customerTxt .link{
+  text-decoration: none;
+  font-size: medium;
+}
+.deliveredTo {
+  display: flex;
+  margin: 20px;
+  padding: 20px;
+}
+.deliveredTo h1{
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+}
+.productInfo {
+  background-color: green;
+}
+.product {
+  width: 100%;
+  background-color: greenyellow;
+}
+.paymentInfo {
+  background-color: crimson;
+}
+.card {
+  background-color: blueviolet;
+}

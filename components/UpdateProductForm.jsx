@@ -57,12 +57,6 @@ const updateProductForm = ({ product, id }) => {
     if (isError) {
       toast.error(message);
     }
-      // setFormData({
-      //   title: '',
-      //   description: '',
-      //   category: '',
-      //   price: '',
-      // });
  
   };
   const onClick = () => {
@@ -70,7 +64,7 @@ const updateProductForm = ({ product, id }) => {
   }
   return (
     <>
-      <button onClick={onClick}>update</button>
+      <button onClick={onClick}>{modalOpen ? 'cancel' : 'update'}</button>
 
       <form
         className={modalOpen ? ` ${style.modal} ` : `${style.modalOpen}`}
@@ -145,7 +139,7 @@ const updateProductForm = ({ product, id }) => {
           />
         </div>
 
-        <div>
+        <div className={style.previewImg}>
           {previewSource && (
             <img src={previewSource} alt='' className='img-fluid' />
           )}
