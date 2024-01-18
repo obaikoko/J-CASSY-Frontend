@@ -65,20 +65,38 @@ function Order() {
           <div className={style.wrapper}>
             <div className={style.product}>
               <h3>product</h3>
-              <h3>Quantity</h3>
+              <h3>Qty</h3>
               <h3>Unit Price</h3>
               <h3>Total</h3>
             </div>
             <div className={style.productSection}>
-                <h4>Snikers</h4>
-                <p>3</p>
-                <p>$200</p>
-                <p>$600</p>
+              <h4>Snikers</h4>
+              <p>3</p>
+              <p>$200</p>
+              <p>$600</p>
+            </div>
+            <div className={style.productSection}>
+              <h4>Jungle Boots</h4>
+              <p>1</p>
+              <p>$100</p>
+              <p>$100</p>
+            </div>
+            <div className={style.productSection}>
+              <h4>Gucci Bag</h4>
+              <p>2</p>
+              <p>$900</p>
+              <p>$1800</p>
+            </div>
+            <div className={style.productSection}>
+              <h4>Wrist Watch</h4>
+              <p>1</p>
+              <p>$8500</p>
+              <p>$8500</p>
             </div>
           </div>
 
           <div className={style.paymentInfo}>
-            Payment Info
+            <h2>Payment Info</h2>
             <div className={style.card}>
               <FaCreditCard /> Master Card ********4563
             </div>
@@ -86,7 +104,6 @@ function Order() {
             <p>Phone: +445 521 5212</p>
           </div>
         </div>
-        <button>save note</button>
       </main>
     </div>
   );

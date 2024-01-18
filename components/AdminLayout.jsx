@@ -20,8 +20,6 @@ import { logout, reset } from '@/src/features/auth/authSlice';
 import Dashboard from './Dashboard';
 import Products from './Products';
 import Order from './Order';
-import Statistics from './Statistics';
-import Review from './Review';
 import Custormers from './Custormers';
 import Transaction from './Transaction';
 import Settings from './Settings';
@@ -98,22 +96,6 @@ function AdminLayout() {
                 <FaUsers />
               </div>
               Customers
-            </button>
-          </li>
-          <li className={selectedSection === 'statistics' ? style.active : ''}>
-            <button onClick={() => handleSectionChange('statistics')}>
-              <div className={style.icon}>
-                <FaChartBar />
-              </div>
-              Statistics
-            </button>
-          </li>
-          <li className={selectedSection === 'reviews' ? style.active : ''}>
-            <button onClick={() => handleSectionChange('reviews')}>
-              <div className={style.icon}>
-                <FaStar />
-              </div>
-              Reviews
             </button>
           </li>
           <li
@@ -198,8 +180,6 @@ function AdminLayout() {
         {selectedSection === 'products' && <Products />}
         {selectedSection === 'orders' && <Order />}
         {selectedSection === 'customers' && <Custormers />}
-        {selectedSection === 'statistics' && <Statistics />}
-        {selectedSection === 'reviews' && <Review />}
         {selectedSection === 'transactions' && <Transaction />}
         {selectedSection === 'settings' && <Settings />}
       </main>
