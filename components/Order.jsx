@@ -3,6 +3,7 @@ import style from '../styles/order.module.css';
 import Link from 'next/link';
 import {
   FaCalendar,
+  FaCreditCard,
   FaMapMarkerAlt,
   FaPrint,
   FaUserCircle,
@@ -61,17 +62,28 @@ function Order() {
         </div>
 
         <div className={style.productInfo}>
-          <div className={style.product}>
-            <h3>product</h3>
-            <h3>Quantity</h3>
-            <h3>Unit Price</h3>
-            <h3>Total</h3>
+          <div className={style.wrapper}>
+            <div className={style.product}>
+              <h3>product</h3>
+              <h3>Quantity</h3>
+              <h3>Unit Price</h3>
+              <h3>Total</h3>
+            </div>
+            <div className={style.productSection}>
+                <h4>Snikers</h4>
+                <p>3</p>
+                <p>$200</p>
+                <p>$600</p>
+            </div>
           </div>
 
           <div className={style.paymentInfo}>
-            <div className={style.card}>Card Details</div>
-            <p>Business Name</p>
-            <p>Phone</p>
+            Payment Info
+            <div className={style.card}>
+              <FaCreditCard /> Master Card ********4563
+            </div>
+            <p>Business Name: Master Card, Inc.</p>
+            <p>Phone: +445 521 5212</p>
           </div>
         </div>
         <button>save note</button>
