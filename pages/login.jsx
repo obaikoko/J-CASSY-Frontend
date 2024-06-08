@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { login, reset } from '../src/features/auth/authSlice';
+import { useLoginMutation } from '@/features/slices/userApiSlice';
+import { setCredentials } from '@/features/slices/authSlice';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { toast } from 'react-toastify';
@@ -13,21 +14,10 @@ function Login() {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const { email, password } = formData;
 
+  const [login, { isLoading, isError }] = useLoginMutation();
+
   const dispatch = useDispatch();
-  const navigate = useRouter();
-
-  const { user, isSuccess, isLoading, isError, message } = useSelector(
-    (state) => state.auth
-  );
-
-  useEffect(() => {
-    if (isError) {
-      dispatch(reset());
-    }
-    if (user || isSuccess) {
-      navigate.push('/admin');
-    }
-  }, [user, isError]);
+  const router = useRouter();
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -36,22 +26,19 @@ function Login() {
     }));
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    const userData = {
-      email,
-      password,
-    };
-
-    dispatch(login(userData));
+    try {
+      const res = await login({ email, password }).unwrap();
+      dispatch(setCredentials({ ...res }));
+      // navigate(redirect);
+      router.push('/');
+      toast.success(`welcome ${res.firstName}`);
+    } catch (error) {
+      toast.error(error?.data?.message || error.message);
+    }
   };
-  if (isLoading) {
-    return (
-      <div className={style.loading}>
-        <Spinner />;
-      </div>
-    );
-  }
+ 
   return (
     <div className={style.container}>
       <div className={style.loginBg}></div>
@@ -78,8 +65,9 @@ function Login() {
           />
         </div>
         <button type='submit' className={style.btn}>
-          Login
+          {isLoading ? <Spinner /> : 'Login'}
         </button>
+
         <Link href='/resetPassword' className={style.btn}>
           Forgotten password ?
         </Link>

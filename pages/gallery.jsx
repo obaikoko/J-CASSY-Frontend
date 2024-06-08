@@ -1,39 +1,22 @@
 import Head from 'next/head';
 // import styles from '@/styles/Home.module.css';
-import ProductForm from '@/components/ProductForm';
+// import ProductForm from '@/components/ProductForm';
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useState, useEffect } from 'react';
-import { loadProducts } from '@/src/features/products/productSlice';
-import { getTotal } from '@/src/features/cart/cartSlice';
+// import { loadProducts } from '@/src/features/products/productSlice';
+// import { getTotal } from '@/src/features/cart/cartSlice';
+import { useGetProductsQuery } from '@/features/slices/productsApiSlice';
 import ProductCard from '@/components/ProductCard';
 import Spinner from '@/components/Spinner';
 import style from '../styles/gallery.module.css';
+import MyCarousel from '@/components/MyCarousel';
 
 function gallery() {
   const dispatch = useDispatch();
-  const [goods, setGoods] = useState('');
-  const [admin, setAdmin] = useState('');
-  const { products, isLoading, isSuccess, isError, message } = useSelector(
-    (state) => state.products
-  );
-  const { user } = useSelector((state) => state.auth);
+  const [products, setProducts] = useState('');
 
-  useEffect(() => {
-    dispatch(loadProducts());
-    dispatch(getTotal());
-    setAdmin(user);
-    if (isSuccess) {
-      setGoods(products);
-    }
-  }, [isSuccess]);
+  const { data, error, isLoading } = useGetProductsQuery({});
 
-  if (isLoading) {
-    return (
-      <div className={style.loading}>
-        <Spinner />;
-      </div>
-    );
-  }
   return (
     <>
       <div className={style.container}>
@@ -42,9 +25,15 @@ function gallery() {
           <div className={style.galleryTitle}>
             <h1>J CASSY COLLECTIONS</h1>
           </div>
+          <div style={{ width: '90%' }}>
+            <MyCarousel />
+          </div>
+          {isLoading && <Spinner />}
           <section className={style.galleryItems}>
-            {goods ? (
-              goods.map((good) => <ProductCard key={good._id} good={good} />)
+            {data ? (
+              data.products.map((product) => (
+                <ProductCard key={product._id} product={product} />
+              ))
             ) : (
               <div className={style.error}>
                 <h4>Something went wrong</h4>
@@ -53,7 +42,6 @@ function gallery() {
           </section>
         </div>
       </div>
-      <ProductForm />
     </>
   );
 }

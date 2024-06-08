@@ -82,8 +82,7 @@
   background-image: url('https://res.cloudinary.com/dzajrh9z7/image/upload/v1703252752/J-Cassy/colorful-t-shirts-in-front-of-dark-background-ai-generative-free-photo_avtdlx.jpg');
 }
 .newArrivalsSection {
-  background-color: #fff;
-  color: #000;
+  color: #fff;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -110,7 +109,7 @@
 }
 
 .testimonialSection {
-  background-color: #fff;
+  background-color: #ffffff37;
   width: 100vw;
 
   display: flex;
@@ -120,7 +119,7 @@
   justify-content: center;
 }
 .testimonialSection h1 {
-  color: #000;
+  color: #fff;
   text-transform: uppercase;
   margin-top: 20px;
 }

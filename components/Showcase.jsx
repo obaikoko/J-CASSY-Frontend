@@ -1,4 +1,3 @@
-import Video from '@/components/Video';
 import style from '../styles/showcase.module.css';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
