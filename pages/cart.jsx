@@ -1,7 +1,7 @@
-import CartItem from '@/components/CartItem';
+// import CartItem from '@/components/CartItem';
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearCart, getTotal } from '@/src/features/cart/cartSlice';
+// import { clearCart, getTotal } from '@/src/features/cart/cartSlice';
 import style from '../styles/cart.module.css';
 
 function cart() {
@@ -11,11 +11,11 @@ function cart() {
   const goods = useSelector((state) => state.cart.cartItem);
   const { totalAmount, totalQuantity } = useSelector((state) => state.cart);
 
-  useEffect(() => {
-    dispatch(getTotal());
-    setProducts(goods);
-    setCartTotalAmount(totalAmount);
-  }, [goods, totalAmount]);
+  // useEffect(() => {
+  //   dispatch(getTotal());
+  //   setProducts(goods);
+  //   setCartTotalAmount(totalAmount);
+  // }, [goods, totalAmount]);
 
   const onClick = () => {
     dispatch(clearCart());

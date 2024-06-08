@@ -59,11 +59,10 @@ function ProductDetails() {
   };
   return (
     <>
-    
       <div className={style.container}>
         <button onClick={goBack}>Go Back</button>
         {isLoading && <Spinner />}
-       
+
         {product && (
           <section className={style.product}>
             <div className={style.productDetails}>
@@ -74,11 +73,12 @@ function ProductDetails() {
                 <li>
                   <h2> {product.title}</h2>
                 </li>
+
+                <li>Category: {product.category}</li>
+                <li>Price: ${product.price}</li>
                 <li>
                   Description: <p>{product.description}</p>
                 </li>
-                <li>Category: {product.category}</li>
-                <li>Price: ${product.price}</li>
               </ul>
               <div></div>
             </div>
