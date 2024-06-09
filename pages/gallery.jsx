@@ -16,6 +16,7 @@ function gallery() {
   const [products, setProducts] = useState('');
 
   const { data, error, isLoading } = useGetProductsQuery({});
+  console.log(data);
 
   return (
     <>
